@@ -1,8 +1,10 @@
+import { Navbar } from './components/Navbar';
+
 export const App = () => {
   return (
-    <div className="dark bg-bg min-h-screen">
-      <div className="">test</div>
-    </div>
+    <main className=" bg-bg text-text min-h-screen">
+      <Navbar />
+    </main>
   );
 };
 
