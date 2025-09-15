@@ -10,10 +10,10 @@
   --color-text: var(--color-gray-900);
   --color-text-muted: var(--color-gray-600);
 
-  --color-accent: var(--color-green-300);
-  --color-accent-hover: var(--color-green-400);
+  --color-accent: var(--color-emerald-500);
+  --color-accent-hover: var(--color-emerald-400);
 
-  --color-success: var(--color-green-600);
+  --color-success: var(--color-emerald-600);
   --color-error: var(--color-red-600);
 
   --font-sans: 'Roboto', ui-sans-serif;
@@ -30,9 +30,9 @@
   --color-text: var(--color-gray-100);
   --color-text-muted: var(--color-gray-400);
 
-  --color-accent: var(--color-green-400);
-  --color-accent-hover: var(--color-green-300);
+  --color-accent: var(--color-emerald-400);
+  --color-accent-hover: var(--color-emerald-300);
 
-  --color-success: var(--color-green-400);
+  --color-success: var(--color-emerald-400);
   --color-error: var(--color-red-400);
 }
