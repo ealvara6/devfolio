@@ -5,14 +5,13 @@ import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 
 export const ThemeToggle = ({ className }: { className?: string }) => {
-  const { toggle } = useTheme();
-  const [enabled, setEnabled] = useState(false);
+  const { toggle, isDark } = useTheme();
+  console.log(isDark)
 
   return (
     <Switch
-      checked={enabled}
-      onChange={setEnabled}
-      onClick={toggle}
+      checked={!isDark}
+      onChange={toggle}
       className={clsx(
         'group h-10 w-19 items-center rounded-full bg-surface transition shadow-md',
         className
