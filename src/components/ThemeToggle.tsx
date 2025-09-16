@@ -1,21 +1,33 @@
 import { Switch } from '@headlessui/react';
-import { useTheme } from '../useTheme';
-import { useState } from 'react';
+import { useTheme } from '../context/theme/useTheme';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 
-export const ThemeToggle = ({ className }: { className?: string }) => {
-  const { toggle } = useTheme();
-  const [enabled, setEnabled] = useState(false);
+type Variant = 'bg1' | 'bg2';
+
+const v = {
+  bg1: 'bg-bg',
+  bg2: 'bg-surface',
+};
+
+export const ThemeToggle = ({
+  className,
+  variant = 'bg1',
+}: {
+  className?: string;
+  variant?: Variant;
+}) => {
+  const { toggle, isDark } = useTheme();
+  console.log(isDark);
 
   return (
     <Switch
-      checked={enabled}
-      onChange={setEnabled}
-      onClick={toggle}
+      checked={!isDark}
+      onChange={toggle}
       className={clsx(
-        'group h-10 w-19 items-center rounded-full bg-surface transition shadow-md',
-        className
+        'group h-10 w-19 items-center rounded-full  transition shadow-md',
+        className,
+        v[variant]
       )}
     >
       <div className="flex justify-between pr-2 relative">

@@ -8,7 +8,7 @@ export const App = () => {
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
   return (
-    <main className=" bg-bg text-text min-h-screen transition-all relative">
+    <main className=" bg-bg text-text min-h-screen transition-all duration-500 relative">
       <Navbar openMenu={openDrawer} />
       <Drawer open={drawerOpen} onClose={closeDrawer} />
     </main>

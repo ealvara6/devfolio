@@ -34,7 +34,7 @@ export const Navbar = ({ openMenu }: NavbarProps) => {
             <a
               href="#"
               onClick={() => setIsActive(link.name)}
-              className={`rounded-full border-2 border-bg  hover:border-l-accent-hover hover:border-r-accent-hover transition-colors hover:text-accent-hover px-5 py-2 [transition-property:border-color] ${
+              className={`rounded-full border-2 border-transparent [transition-property:border-color] hover:border-l-accent-hover hover:border-r-accent-hover transition-colors hover:text-accent-hover px-5 py-2 ${
                 isActive === link.name
                   ? 'border-l-accent-hover border-r-accent-hover text-accent-hover'
                   : ''
@@ -49,7 +49,7 @@ export const Navbar = ({ openMenu }: NavbarProps) => {
         <button className="border cursor-pointer shadow-md hover:-translate-y-0.5 text-sm hover:translate-x-0.5 transition border-border  p-3 rounded-full bg-accent hover:bg-accent-hover active:translate-0">
           <EnvelopeIcon className="w-6 h-6 text-white" aria-label="Contact" />
         </button>
-        <ThemeToggle className="hidden sm:block" />
+        <ThemeToggle className="hidden sm:block" variant="bg2" />
       </div>
     </nav>
   );
