@@ -9,8 +9,7 @@ type DrawerProps = {
 };
 
 export const Drawer = ({ open, onClose }: DrawerProps) => {
-
-  const delays = ['delay-[300ms]', 'delay-[600ms]', 'delay-[900ms]']
+  const delays = ['delay-[300ms]', 'delay-[600ms]', 'delay-[900ms]'];
 
   return (
     <div
@@ -18,23 +17,26 @@ export const Drawer = ({ open, onClose }: DrawerProps) => {
         open ? 'translate-y-0' : '-translate-y-full'
       } transition-all duration-700 p-3 gap-10 flex flex-col`}
     >
-      <div className=' flex justify-between'>
-      <button onClick={onClose} >
-        <XMarkIcon className="w-8" />
-      </button>
-      <ThemeToggle />
+      <div className=" flex justify-between">
+        <button onClick={onClose}>
+          <XMarkIcon className="w-8" />
+        </button>
+        <ThemeToggle />
       </div>
       <Transition show={open}>
-      <div className="flex flex-col self-center tracking-widest gap-6 text-xl text-center font-subHeading">
-
+        <div className="flex flex-col self-center tracking-widest gap-6 text-xl text-center font-subHeading">
           {links.map((link, index) => (
-            <TransitionChild key={link.name}  >
-              <div className={`transition-opacity duration-300 ease-in data-closed:opacity-0 ${open ? delays[index] : ''}`}>
+            <TransitionChild key={link.name}>
+              <div
+                className={`transition-opacity duration-300 ease-in data-closed:opacity-0 ${
+                  open ? delays[index] : ''
+                }`}
+              >
                 {link.name}
               </div>
             </TransitionChild>
           ))}
-      </div>
+        </div>
       </Transition>
     </div>
   );
