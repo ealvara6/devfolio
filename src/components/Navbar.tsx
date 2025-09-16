@@ -34,7 +34,7 @@ export const Navbar = ({ openMenu }: NavbarProps) => {
             <a
               href="#"
               onClick={() => setIsActive(link.name)}
-              className={`rounded-full border-2 border-bg  hover:border-l-accent-hover hover:border-r-accent-hover transition-colors hover:text-accent-hover px-5 py-2 [transition-property:border-color] ${
+              className={`rounded-full border-2 border-transparent [transition-property:border-color] hover:border-l-accent-hover hover:border-r-accent-hover transition-colors hover:text-accent-hover px-5 py-2 ${
                 isActive === link.name
                   ? 'border-l-accent-hover border-r-accent-hover text-accent-hover'
                   : ''

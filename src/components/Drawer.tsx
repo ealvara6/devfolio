@@ -1,6 +1,7 @@
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { links } from '../data/navLinks';
 import { Transition, TransitionChild } from '@headlessui/react';
+import { ThemeToggle } from './ThemeToggle';
 
 type DrawerProps = {
   open: boolean;
@@ -8,26 +9,33 @@ type DrawerProps = {
 };
 
 export const Drawer = ({ open, onClose }: DrawerProps) => {
+
+  const delays = ['delay-[300ms]', 'delay-[600ms]', 'delay-[900ms]']
+
   return (
     <div
-      className={`absolute top-0  bg-surface min-h-screen min-w-screen -translate-y-full ${
+      className={`absolute top-0  bg-surface min-h-screen min-w-screen -translate-y-full sm:hidden ${
         open ? 'translate-y-0' : '-translate-y-full'
-      } transition-all duration-500 p-3 flex flex-col gap-10`}
+      } transition-all duration-700 p-3 gap-10 flex flex-col`}
     >
-      <button onClick={onClose} className="self-end">
+      <div className=' flex justify-between'>
+      <button onClick={onClose} >
         <XMarkIcon className="w-8" />
       </button>
-      <div className="flex fixed top- flex-col self-center tracking-widest gap-10 text-xl text-center font-subHeading">
-        <Transition show={open}>
+      <ThemeToggle />
+      </div>
+      <Transition show={open}>
+      <div className="flex flex-col self-center tracking-widest gap-6 text-xl text-center font-subHeading">
+
           {links.map((link, index) => (
-            <TransitionChild>
-              <div className="" style={{ transitionDelay: `${index * 300}ms` }}>
+            <TransitionChild key={link.name}  >
+              <div className={`transition-opacity duration-300 ease-in data-closed:opacity-0 ${open ? delays[index] : ''}`}>
                 {link.name}
               </div>
             </TransitionChild>
           ))}
-        </Transition>
       </div>
+      </Transition>
     </div>
   );
 };
