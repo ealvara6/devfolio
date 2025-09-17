@@ -20,7 +20,7 @@ export const Navbar = ({ openMenu }: NavbarProps) => {
   };
 
   return (
-    <nav className="min-h-14 items-center grid p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans">
+    <nav className="min-h-14 items-center grid p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans fixed top-0 left-0 min-w-full z-50">
       <Menu />
       <div className=" justify-self-center sm:justify-self-start font-heading text-3xl sm:text-4xl font-bold col-start-2 sm:col-start-1">
         Alvarado
