@@ -1,18 +1,30 @@
 import { Bars3Icon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import { ThemeToggle } from './ThemeToggle';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { links, type ActiveProps } from '../data/navLinks';
 
 type NavbarProps = { openMenu: () => void };
 
 export const Navbar = ({ openMenu }: NavbarProps) => {
   const [isActive, setIsActive] = useState<ActiveProps>('');
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const Menu = () => {
     return (
       <button className="col-start-1 sm:hidden justify-self-start">
         <Bars3Icon
           aria-label="Open Menu"
-          className="w-10 text-accent dark:bg-bg bg-white dark:shadow-none shadow-md p-1 rounded-full"
+          className="w-10 text-accent bg-bg dark:shadow-none shadow-md p-1 rounded-full"
           onClick={openMenu}
         />
       </button>
@@ -20,7 +32,11 @@ export const Navbar = ({ openMenu }: NavbarProps) => {
   };
 
   return (
-    <nav className="min-h-14 items-center grid p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans fixed top-0 left-0 min-w-full z-50">
+    <nav
+      className={`min-h-14 items-center grid p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans fixed top-0 left-0 min-w-full z-10 transition-shadow  ${
+        scrolled ? 'backdrop-blur shadow-md' : 'backdrop-blur-none'
+      }`}
+    >
       <Menu />
       <div className=" justify-self-center sm:justify-self-start font-heading text-3xl sm:text-4xl font-bold col-start-2 sm:col-start-1">
         Alvarado
