@@ -13,7 +13,7 @@ export const Drawer = ({ open, onClose }: DrawerProps) => {
 
   return (
     <div
-      className={`absolute top-0  bg-surface min-h-screen min-w-screen -translate-y-full sm:hidden ${
+      className={`absolute top-0  bg-surface min-h-screen min-w-screen -translate-y-full sm:hidden z-50 ${
         open ? 'translate-y-0' : '-translate-y-full'
       } transition-all duration-700 p-3 gap-10 flex flex-col`}
     >
