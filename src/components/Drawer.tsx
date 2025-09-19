@@ -2,7 +2,6 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import { links } from '../data/navLinks';
 import { Transition, TransitionChild } from '@headlessui/react';
 import { ThemeToggle } from './ThemeToggle';
-
 type DrawerProps = {
   open: boolean;
   onClose: () => void;
@@ -15,7 +14,7 @@ export const Drawer = ({ open, onClose }: DrawerProps) => {
     <div
       className={`absolute top-0  bg-surface min-h-screen min-w-screen -translate-y-full sm:hidden z-50 ${
         open ? 'translate-y-0' : '-translate-y-full'
-      } transition-all duration-700 p-3 gap-10 flex flex-col`}
+      } transition-all duration-700 p-3 gap-10 flex flex-col sticky`}
     >
       <div className=" flex justify-between">
         <button onClick={onClose}>
