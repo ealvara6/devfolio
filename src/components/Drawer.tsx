@@ -2,6 +2,8 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import { links } from '../data/navLinks';
 import { Transition, TransitionChild } from '@headlessui/react';
 import { ThemeToggle } from './ThemeToggle';
+import { useEffect } from 'react';
+
 type DrawerProps = {
   open: boolean;
   onClose: () => void;
@@ -9,6 +11,15 @@ type DrawerProps = {
 
 export const Drawer = ({ open, onClose }: DrawerProps) => {
   const delays = ['delay-[300ms]', 'delay-[600ms]', 'delay-[900ms]'];
+
+  useEffect(() => {
+    if (open) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
 
   return (
     <div
