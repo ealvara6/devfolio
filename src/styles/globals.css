@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap');
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -17,10 +17,9 @@
   --color-error: var(--color-red-600);
 
   --font-sans: 'Roboto', ui-sans-serif;
-
   --font-heading: 'Tangerine', ui-serif;
-
   --font-subHeading: 'Roboto Condensed';
+  --font-name: 'Playfair Display';
 }
 
 .dark {
