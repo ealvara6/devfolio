@@ -1,7 +1,7 @@
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
-import { ThemeToggle } from './ThemeToggle';
+import { ThemeToggle } from '../ThemeToggle';
 import { useEffect, useState } from 'react';
-import { links, type ActiveProps } from '../data/navLinks';
+import { links, type ActiveProps } from '../../data/navLinks';
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState<ActiveProps>('');
@@ -18,7 +18,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav
+    <div
       className={`min-h-14 items-center hidden sm:grid p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans fixed top-0 left-0 min-w-full z-10 transition-shadow  ${
         scrolled ? 'backdrop-blur shadow-md' : 'backdrop-blur-none'
       }`}
@@ -52,6 +52,6 @@ export const Navbar = () => {
         </button>
         <ThemeToggle className="block" variant="bg2" />
       </div>
-    </nav>
+    </div>
   );
 };
