@@ -23,14 +23,14 @@
 }
 
 .dark {
-  --color-bg: var(--color-gray-950);
-  --color-surface: var(--color-gray-900);
-  --color-border: var(--color-gray-800);
-  --color-text: var(--color-gray-100);
-  --color-text-muted: var(--color-gray-400);
+  --color-bg: var(--color-zinc-950);
+  --color-surface: var(--color-zinc-900);
+  --color-border: var(--color-zinc-800);
+  --color-text: var(--color-zinc-100);
+  --color-text-muted: var(--color-zinc-400);
 
-  --color-accent: var(--color-emerald-400);
-  --color-accent-hover: var(--color-emerald-300);
+  --color-accent: var(--color-emerald-500);
+  --color-accent-light: var(--color-emerald-300);
 
   --color-success: var(--color-emerald-400);
   --color-error: var(--color-red-400);
