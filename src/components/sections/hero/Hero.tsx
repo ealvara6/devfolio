@@ -6,7 +6,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-black/60 -z-10"></div>
       <div className="mx-7 pt-24 flex flex-col gap-4 justify-center items-center text-text">
         <div className="border w-72 h-72 bg-border border-border rounded-full flex justify-center items-center">
-          <img src={Memoji} alt="Image of Memoji" className="w-46 h-46" />
+          <img src={Memoji} alt="Image of Memoji" className="w-40 h-auto" />
         </div>
         <div className="flex flex-col text-center gap-1">
           <div className="font-heading text-3xl font-bold tracking-wider">
