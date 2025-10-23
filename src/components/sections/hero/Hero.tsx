@@ -2,7 +2,7 @@ import Memoji from '@/assets/Memoji.png';
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-[url('../assets/Hexagon.svg')] relative z-10 ">
+    <div className="min-h-screen w-full bg-[url('../assets/Hexagon.svg')] relative z-10">
       <div className="absolute inset-0 bg-black/60 -z-10"></div>
       <div className="mx-7 pt-24 flex flex-col gap-4 justify-center items-center text-text">
         <div className="border w-72 h-72 bg-border border-border rounded-full flex justify-center items-center">
