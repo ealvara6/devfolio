@@ -9,8 +9,8 @@ export const Hero = () => {
           <img src={Memoji} alt="Image of Memoji" className="w-40 h-auto" />
         </div>
         <div className="flex flex-col text-center gap-1">
-          <div className="font-heading text-3xl font-bold tracking-wider">
-            Hi, I'm Eduardo
+          <div className="font-heading text-3xl font-bold tracking-wider relative">
+            Hi, I'm Eduardo<span className="absolute">&#x1F44B;</span>
           </div>
           <div className="font-subheading text-lg font-medium text-text-muted tracking-wide">
             Full-Stack Developer & Tech Enthusiast
