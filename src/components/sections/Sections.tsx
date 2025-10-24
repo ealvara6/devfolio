@@ -5,7 +5,7 @@ import { Projects } from './projects/Projects';
 
 export const Sections = () => {
   return (
-    <main className="pb-16">
+    <main className="pb-16 w-full max-w-2xl mx-auto">
       <Hero />
       <About />
       <Projects />
