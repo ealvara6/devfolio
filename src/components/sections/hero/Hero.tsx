@@ -9,14 +9,14 @@ export const Hero = () => {
           <img src={Memoji} alt="Image of Memoji" className="w-40 h-auto" />
         </div>
         <div className="flex flex-col text-center gap-1">
-          <div className="font-heading text-4xl font-bold tracking-wider relative pb-2">
+          <div className="font-heading text-4xl font-medium tracking-wider relative pb-2">
             Hi, I'm Eduardo<span className="absolute">&#x1F44B;</span>
           </div>
-          <div className="font-subheading text-2xl font-medium text-text-muted tracking-wide pb-6">
+          <div className="font-subheading text-2xl font-light text-text-muted tracking-wide pb-6">
             Full-Stack Developer & Tech Enthusiast
           </div>
         </div>
-        <div className="w-full text-xl flex flex-col gap-4 tracking-wide">
+        <div className="w-full text-2xl flex flex-col gap-4 tracking-wide">
           <button className="rounded-md w-full h-18 py-4 bg-accent border-2 border-accent">
             View My Work
           </button>
