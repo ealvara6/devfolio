@@ -17,10 +17,10 @@ export const Hero = () => {
           </div>
         </div>
         <div className="w-full text-lg flex flex-col gap-4 tracking-wide">
-          <button className="rounded-md w-full h-18 py-4 bg-accent border-2 border-accent">
+          <button className="rounded-md w-full py-3 bg-accent border-2 border-accent">
             View My Work
           </button>
-          <button className="rounded-md w-full h-18 py-4 border-[var(--color-accent-light)] border-2">
+          <button className="rounded-md w-full py-3 border-[var(--color-accent-light)] border-2">
             Contact Me
           </button>
         </div>
