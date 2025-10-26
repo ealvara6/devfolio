@@ -10,7 +10,8 @@ export const Hero = () => {
         </div>
         <div className="flex flex-col text-center gap-1">
           <div className="font-heading text-3xl font-medium tracking-wider relative pb-2">
-            Hi, I'm Eduardo<span className="absolute">&#x1F44B;</span>
+            Hi, I'm Eduardo
+            <span className="absolute text-2xl translate-y-0.5">&#x1F44B;</span>
           </div>
           <div className="font-subheading text-lg font-light text-text-muted tracking-wide pb-6">
             Full-Stack Developer & Tech Enthusiast
