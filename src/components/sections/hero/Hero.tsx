@@ -5,8 +5,8 @@ export const Hero = () => {
     <div className="min-h-screen w-full bg-[url('../assets/Hexagon.svg')] relative z-10 pt-8">
       <div className="absolute inset-0 bg-black/10 -z-10"></div>
       <div className="mx-7 pt-24 flex flex-col gap-2 justify-center items-center text-text">
-        <div className="border w-72 h-72 bg-surface border-border rounded-full flex justify-center items-center">
-          <img src={Memoji} alt="Image of Memoji" className="w-40 h-auto" />
+        <div className="border w-64 h-64 bg-surface border-border rounded-full flex justify-center items-center">
+          <img src={Memoji} alt="Image of Memoji" className="w-36 h-auto" />
         </div>
         <div className="flex flex-col text-center gap-1">
           <div className="font-heading text-3xl font-medium tracking-wider relative pb-2">
