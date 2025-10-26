@@ -17,7 +17,7 @@ export const Hero = () => {
             Full-Stack Developer & Tech Enthusiast
           </div>
         </div>
-        <div className="w-full text-lg flex flex-col gap-4 tracking-wide">
+        <div className="w-full text-lg flex flex-col gap-6 tracking-wide">
           <button className="rounded-md w-full py-3 bg-accent border-2 border-accent">
             View My Work
           </button>
