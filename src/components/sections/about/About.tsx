@@ -1,17 +1,28 @@
 import headShot from '@/assets/headShot.png';
 import type React from 'react';
 import { CheckBadgeIcon } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
 
 export const About = () => {
-  const Card = ({ children }: { children: React.ReactNode }) => {
+  const Card = ({
+    children,
+    className,
+  }: {
+    children: React.ReactNode;
+    className?: string;
+  }) => {
     return (
-      <div className="w-full h-fit bg-surface rounded-xl p-8">{children}</div>
+      <div
+        className={clsx('w-full h-fit bg-surface rounded-xl p-8', className)}
+      >
+        {children}
+      </div>
     );
   };
 
   return (
     <section
-      className="min-h-screen flex flex-col items-center pt-14 mx-7"
+      className="min-h-screen flex flex-col gap-10 items-center pt-14 mx-7"
       id="about"
     >
       <Card>
@@ -34,23 +45,28 @@ export const About = () => {
           </button>
         </div>
       </Card>
-      <Card>
-        <div className="text-3xl font-semibold tracking-wider pb-0.5">
-          About Me
+      <Card className="flex flex-col gap-2">
+        <div>
+          <div className="text-3xl font-semibold tracking-wider pb-0.5">
+            About Me
+          </div>
+          <div className="text-xs text-accent font-light tracking-wide flex items-center gap-0.5">
+            <CheckBadgeIcon className="w-4" /> Available for Hire
+          </div>
         </div>
-        <div className="text-xs text-accent pb-3 font-light tracking-wide flex items-center gap-0.5">
-          <CheckBadgeIcon className="w-4" /> Available for Hire
-        </div>
-        <div className="pb-5 text-base tracking-tight">
-          I'm Eduardo, a web developer with a degree in Management Information
-          Systems from the University of Houston. I focus on building modern,
-          responsive web applications that follow today's best practices.
-        </div>
-        <div className=" text-base tracking-tight">
-          When I'm not coding, you'll usually find me at the gym or
-          experimenting with new recipes. I love cooking, staying active, and
-          finding small ways to keep improving — whether it's in the kitchen or
-          in my projects.
+        <div className="w-full border border-accent" />
+        <div>
+          <div className="pb-5 text-base tracking-tight">
+            I'm Eduardo, a web developer with a degree in Management Information
+            Systems from the University of Houston. I focus on building modern,
+            responsive web applications that follow today's best practices.
+          </div>
+          <div className=" text-base tracking-tight">
+            When I'm not coding, you'll usually find me at the gym or
+            experimenting with new recipes. I love cooking, staying active, and
+            finding small ways to keep improving — whether it's in the kitchen
+            or in my projects.
+          </div>
         </div>
       </Card>
     </section>
