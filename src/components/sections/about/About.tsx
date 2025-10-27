@@ -7,11 +7,11 @@ export const About = () => {
       id="about"
     >
       <div className="w-full h-fit bg-surface rounded-xl">
-        <div className="p-6 flex flex-col items-center gap-2">
+        <div className="p-8 flex flex-col items-center gap-2">
           <img
             src={headShot}
             alt="head shot of Eduardo Alvarado"
-            className="rounded-4xl"
+            className="rounded-xl"
           />
           <div className="text-center">
             <div className="text-xl tracking-wide font-semibold">
