@@ -21,6 +21,9 @@ export const About = () => {
               Jr. Full Stack Web Developer
             </div>
           </div>
+          <button className="w-full border py-2 border-accent bg-accent rounded-md text-lg mt-3">
+            Download CV
+          </button>
         </div>
       </div>
     </section>
