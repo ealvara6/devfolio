@@ -1,13 +1,20 @@
 import headShot from '@/assets/headShot.png';
+import type React from 'react';
 
 export const About = () => {
+  const Card = ({ children }: { children: React.ReactNode }) => {
+    return (
+      <div className="w-full h-fit bg-surface rounded-xl p-8">{children}</div>
+    );
+  };
+
   return (
     <section
-      className="h-screen flex flex-col items-center pt-14 mx-7"
+      className="min-h-screen flex flex-col items-center pt-14 mx-7"
       id="about"
     >
-      <div className="w-full h-fit bg-surface rounded-xl">
-        <div className="p-8 flex flex-col items-center gap-2">
+      <Card>
+        <div className="gap-2 items-center flex flex-col">
           <img
             src={headShot}
             alt="head shot of Eduardo Alvarado"
@@ -25,7 +32,24 @@ export const About = () => {
             Download CV
           </button>
         </div>
-      </div>
+      </Card>
+      <Card>
+        <div className="text-2xl font-semibold tracking-wider">About Me</div>
+        <div className="text-sm text-accent pb-3 font-light tracking-wide">
+          Available for Hire
+        </div>
+        <div className="pb-5 text-base tracking-tight">
+          I'm Eduardo, a web developer with a degree in Management Information
+          Systems from the University of Houston. I focus on building modern,
+          responsive web applications that follow today's best practices.
+        </div>
+        <div className=" text-base tracking-tight">
+          When I'm not coding, you'll usually find me at the gym or
+          experimenting with new recipes. I love cooking, staying active, and
+          finding small ways to keep improving — whether it's in the kitchen or
+          in my projects.
+        </div>
+      </Card>
     </section>
   );
 };
