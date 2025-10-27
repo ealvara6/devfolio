@@ -1,5 +1,6 @@
 import headShot from '@/assets/headShot.png';
 import type React from 'react';
+import { CheckBadgeIcon } from '@heroicons/react/24/outline';
 
 export const About = () => {
   const Card = ({ children }: { children: React.ReactNode }) => {
@@ -35,8 +36,8 @@ export const About = () => {
       </Card>
       <Card>
         <div className="text-2xl font-semibold tracking-wider">About Me</div>
-        <div className="text-sm text-accent pb-3 font-light tracking-wide">
-          Available for Hire
+        <div className="text-sm text-accent pb-3 font-light tracking-wide flex items-center gap-0.5">
+          <CheckBadgeIcon className="w-5" /> Available for Hire
         </div>
         <div className="pb-5 text-base tracking-tight">
           I'm Eduardo, a web developer with a degree in Management Information
