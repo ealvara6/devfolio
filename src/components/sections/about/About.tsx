@@ -35,9 +35,9 @@ export const About = () => {
         </div>
       </Card>
       <Card>
-        <div className="text-2xl font-semibold tracking-wider">About Me</div>
-        <div className="text-sm text-accent pb-3 font-light tracking-wide flex items-center gap-0.5">
-          <CheckBadgeIcon className="w-5" /> Available for Hire
+        <div className="text-3xl font-semibold tracking-wider">About Me</div>
+        <div className="text-xs text-accent pb-3 font-light tracking-wide flex items-center gap-0.5">
+          <CheckBadgeIcon className="w-4" /> Available for Hire
         </div>
         <div className="pb-5 text-base tracking-tight">
           I'm Eduardo, a web developer with a degree in Management Information
