@@ -11,7 +11,7 @@
   --color-text-muted: var(--color-gray-600);
 
   --color-accent: var(--color-emerald-500);
-  --color-accent-hover: var(--color-emerald-400);
+  --color-accent-light: var(--color-emerald-400);
 
   --color-success: var(--color-emerald-600);
   --color-error: var(--color-red-600);
