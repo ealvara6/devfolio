@@ -1,12 +1,26 @@
-import type { ReactNode } from 'react';
+import reactSvg from '@/assets/react.svg';
 
-const techSection = [
+type TechSectionProps = {
+  name: string;
+  tech: [
+    {
+      name: string;
+      img: string;
+      colorFrom?: string;
+      colorTo?: string;
+    }
+  ];
+};
+
+const techSection: TechSectionProps[] = [
   {
     name: 'Frontend',
     tech: [
       {
         name: 'React',
-        img: 'image',
+        img: reactSvg,
+        colorFrom: 'blue-500/25',
+        colorTo: 'blue-500/15',
       },
     ],
   },
@@ -50,10 +64,12 @@ export const TechStack = () => {
           <div className="min-h-[20vh] flex flex-col">
             <h2 className="text-lg tracking-wide pb-1">{techSection.name}</h2>
             <div className="border border-accent grow rounded-md p-2">
-              {techSection.tech.map((tech) => {
+              {techSection.tech?.map((tech) => {
                 return (
-                  <div className="w-20 h-20 border flex flex-col justify-center gap-2 border-border rounded-md items-center">
-                    <div>{tech.img}</div>
+                  <div
+                    className={`w-20 h-20 border flex flex-col justify-center gap-2 border-border rounded-md items-center bg-gradient-to-b from-[${tech.colorFrom}] to-[${tech.colorTo}]`}
+                  >
+                    <img src={tech.img} alt={`${tech.name} Icon`} />
                   </div>
                 );
               })}
