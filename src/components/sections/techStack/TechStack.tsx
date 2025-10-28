@@ -17,7 +17,7 @@ const techSection = [
 
 export const TechStack = () => {
   return (
-    <section className="min-h-screen flex flex-col mx-7">
+    <section className="min-h-screen flex flex-col mx-7 gap-10">
       <h1 className="self-center text-2xl font-bold tracking-wider">
         Technology
       </h1>
