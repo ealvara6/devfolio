@@ -7,5 +7,9 @@ export type Section = {
 };
 
 export const SECTIONS: Section[] = [
-  { key: 'frontend', name: 'Frontend', tech: ['react', 'typescript'] },
+  {
+    key: 'frontend',
+    name: 'Frontend',
+    tech: ['react', 'typescript', 'tailwindcss'],
+  },
 ];
