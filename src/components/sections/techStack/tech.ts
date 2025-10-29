@@ -1,5 +1,7 @@
 import reactSvg from '@/assets/react.svg';
 
+export type TechKey = 'react' | 'typescript';
+
 export type TechInfo = {
   key: string;
   name: string;
@@ -7,6 +9,12 @@ export type TechInfo = {
   baseColor: string;
 };
 
-export const TECH_REGISTRY: Record<string, TechInfo> = {
+export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
   react: { key: 'react', name: 'React', icon: reactSvg, baseColor: '#2b7fff' },
+  typescript: {
+    key: 'typescript',
+    name: 'React',
+    icon: reactSvg,
+    baseColor: '#2b7fff',
+  },
 };
