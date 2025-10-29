@@ -1,15 +1,18 @@
 import reactSvg from '@/assets/react.svg';
 
+const blueFrom = 'rgba(0,216,255,0.18)';
+const blueTo = 'rgba(0,216,255,0.05)';
+
+type TechCardProps = {
+  name: string;
+  img: string;
+  colorFrom: string;
+  colorTo: string;
+};
+
 type TechSectionProps = {
   name: string;
-  tech: [
-    {
-      name: string;
-      img: string;
-      colorFrom?: string;
-      colorTo?: string;
-    }
-  ];
+  tech: TechCardProps[];
 };
 
 const techSection: TechSectionProps[] = [
@@ -19,8 +22,32 @@ const techSection: TechSectionProps[] = [
       {
         name: 'React',
         img: reactSvg,
-        colorFrom: 'blue-500/25',
-        colorTo: 'blue-500/15',
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
       },
     ],
   },
@@ -29,7 +56,33 @@ const techSection: TechSectionProps[] = [
     tech: [
       {
         name: 'React',
-        img: 'image',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
       },
     ],
   },
@@ -38,7 +91,33 @@ const techSection: TechSectionProps[] = [
     tech: [
       {
         name: 'React',
-        img: 'image',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
       },
     ],
   },
@@ -47,7 +126,33 @@ const techSection: TechSectionProps[] = [
     tech: [
       {
         name: 'React',
-        img: 'image',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
+      },
+      {
+        name: 'React',
+        img: reactSvg,
+        colorFrom: blueFrom,
+        colorTo: blueTo,
       },
     ],
   },
@@ -63,11 +168,11 @@ export const TechStack = () => {
         return (
           <div className="min-h-[20vh] flex flex-col">
             <h2 className="text-lg tracking-wide pb-1">{techSection.name}</h2>
-            <div className="border border-accent grow rounded-md p-2">
+            <div className="border border-accent grow rounded-md py-10 px-4 flex gap-y-6 gap-x-8 flex-wrap justify-center ">
               {techSection.tech?.map((tech) => {
                 return (
                   <div
-                    className={`w-20 h-20 border flex flex-col justify-center gap-2 border-border rounded-md items-center bg-gradient-to-b from-[${tech.colorFrom}] to-[${tech.colorTo}]`}
+                    className={`w-20 h-20 border flex flex-col justify-center gap-2 border-border rounded-md items-center bg-gradient-to-b from-[${tech.colorFrom}] to-[${tech.colorTo}] `}
                   >
                     <img src={tech.img} alt={`${tech.name} Icon`} />
                   </div>
