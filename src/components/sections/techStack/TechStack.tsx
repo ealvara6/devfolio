@@ -25,7 +25,11 @@ export const TechStack = () => {
                       background: `linear-gradient(to bottom, ${from}, ${to})`,
                     }}
                   >
-                    <img src={tech.icon} alt={`${tech.name} Icon`} />
+                    <img
+                      src={tech.icon}
+                      alt={`${tech.name} Icon`}
+                      className="w-10"
+                    />
                   </div>
                 );
               })}
