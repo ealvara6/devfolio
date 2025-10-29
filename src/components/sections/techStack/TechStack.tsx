@@ -10,7 +10,7 @@ export const TechStack = () => {
       </h1>
       {SECTIONS.map((section) => {
         return (
-          <div className="min-h-[20vh] flex flex-col">
+          <div className="min-h-[20vh] flex flex-col" key={section.key}>
             <h2 className="text-lg tracking-wide pb-1">{section.name}</h2>
             <div className="border border-accent grow rounded-md py-10 px-4 flex gap-y-6 gap-x-8 flex-wrap justify-center ">
               {section.tech.map((techKey) => {
@@ -19,6 +19,7 @@ export const TechStack = () => {
                 const to = withOpacity(tech.baseColor, 0.05);
                 return (
                   <div
+                    key={tech.key}
                     className={`w-20 h-20 border flex flex-col justify-center gap-2 border-border rounded-md items-center`}
                     style={{
                       background: `linear-gradient(to bottom, ${from}, ${to})`,
