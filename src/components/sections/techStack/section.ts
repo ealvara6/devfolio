@@ -21,4 +21,9 @@ export const SECTIONS: Section[] = [
       'vite',
     ],
   },
+  {
+    key: 'backend',
+    name: 'Backend',
+    tech: ['nodejs', 'prisma', 'jwt'],
+  },
 ];

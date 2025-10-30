@@ -6,6 +6,14 @@ import zodSvg from '@/assets/zod.svg';
 import html5Svg from '@/assets/html5.svg';
 import css3Svg from '@/assets/css3.svg';
 import viteSvg from '@/assets/vite.svg';
+import nodeJSSvg from '@/assets/nodejs.svg';
+import prismaSvg from '@/assets/prisma.svg';
+import jwtSvg from '@/assets/jwt.svg';
+
+const blue = '#155dfc';
+const red = '#e7000b';
+const purple = '#9810fa';
+const green = '#00a63e';
 
 export type TechKey =
   | 'react'
@@ -15,11 +23,10 @@ export type TechKey =
   | 'zod'
   | 'html5'
   | 'css3'
-  | 'vite';
-
-const blue = '#155dfc';
-const red = '#e7000b';
-const purple = '#9810fa';
+  | 'vite'
+  | 'nodejs'
+  | 'prisma'
+  | 'jwt';
 
 export type TechInfo = {
   key: string;
@@ -70,6 +77,24 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     key: 'vite',
     name: 'Vite',
     icon: viteSvg,
+    baseColor: purple,
+  },
+  nodejs: {
+    key: 'nodejs',
+    name: 'NodeJS',
+    icon: nodeJSSvg,
+    baseColor: green,
+  },
+  prisma: {
+    key: 'prisma',
+    name: 'Prisma',
+    icon: prismaSvg,
+    baseColor: blue,
+  },
+  jwt: {
+    key: 'jwt',
+    name: 'Json Web Token',
+    icon: jwtSvg,
     baseColor: purple,
   },
 };
