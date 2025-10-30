@@ -10,6 +10,15 @@ export const SECTIONS: Section[] = [
   {
     key: 'frontend',
     name: 'Frontend',
-    tech: ['react', 'typescript', 'tailwindcss'],
+    tech: [
+      'react',
+      'typescript',
+      'tailwindcss',
+      'reactQuery',
+      'zod',
+      'html5',
+      'css3',
+      'vite',
+    ],
   },
 ];
