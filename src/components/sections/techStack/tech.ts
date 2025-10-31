@@ -9,11 +9,18 @@ import viteSvg from '@/assets/vite.svg';
 import nodeJSSvg from '@/assets/nodejs.svg';
 import prismaSvg from '@/assets/prisma.svg';
 import jwtSvg from '@/assets/jwt.svg';
+import githubSvg from '@/assets/github.svg';
+import vercelSvg from '@/assets/vercel.svg';
+import railwaySvg from '@/assets/railway.svg';
+import npmSvg from '@/assets/npm.svg';
+import eslintSvg from '@/assets/eslint.svg';
+import prettierSvg from '@/assets/prettier.svg';
 
 const blue = '#155dfc';
 const red = '#e7000b';
 const purple = '#9810fa';
 const green = '#00a63e';
+const grey = '#9f9fa9';
 
 export type TechKey =
   | 'react'
@@ -26,7 +33,13 @@ export type TechKey =
   | 'vite'
   | 'nodejs'
   | 'prisma'
-  | 'jwt';
+  | 'jwt'
+  | 'github'
+  | 'vercel'
+  | 'railway'
+  | 'npm'
+  | 'eslint'
+  | 'prettier';
 
 export type TechInfo = {
   key: string;
@@ -96,5 +109,41 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     name: 'Json Web Token',
     icon: jwtSvg,
     baseColor: purple,
+  },
+  github: {
+    key: 'github',
+    name: 'Github',
+    icon: githubSvg,
+    baseColor: grey,
+  },
+  vercel: {
+    key: 'vercel',
+    name: 'Vercel',
+    icon: vercelSvg,
+    baseColor: grey,
+  },
+  railway: {
+    key: 'railway',
+    name: 'Railway',
+    icon: railwaySvg,
+    baseColor: grey,
+  },
+  npm: {
+    key: 'npm',
+    name: 'npm',
+    icon: npmSvg,
+    baseColor: red,
+  },
+  eslint: {
+    key: 'eslint',
+    name: 'ESlint',
+    icon: eslintSvg,
+    baseColor: purple,
+  },
+  prettier: {
+    key: 'prettier',
+    name: 'Prettier',
+    icon: prettierSvg,
+    baseColor: grey,
   },
 };
