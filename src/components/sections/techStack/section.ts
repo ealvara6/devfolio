@@ -29,6 +29,6 @@ export const SECTIONS: Section[] = [
   {
     key: 'tools',
     name: 'Tools',
-    tech: ['eslint', 'github', 'vercel', 'railway', 'prettier', 'npm'],
+    tech: ['github', 'eslint', 'vercel', 'prettier', 'railway', 'npm'],
   },
 ];

@@ -144,6 +144,6 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     key: 'prettier',
     name: 'Prettier',
     icon: prettierSvg,
-    baseColor: grey,
+    baseColor: red,
   },
 };
