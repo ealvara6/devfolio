@@ -1,13 +1,12 @@
 import { withOpacity } from '@/utils/color';
 import { SECTIONS } from './section';
 import { TECH_REGISTRY } from './tech';
+import { SubHeading } from '@/components/shared/SubHeading';
 
 export const TechStack = () => {
   return (
     <section className="min-h-screen flex flex-col mx-7 gap-22 pt-14">
-      <h1 className="self-center text-3xl font-bold tracking-widest">
-        Technology
-      </h1>
+      <SubHeading className="self-center">Technology</SubHeading>
       {SECTIONS.map((section) => {
         return (
           <div className="min-h-[20vh] flex flex-col" key={section.key}>
