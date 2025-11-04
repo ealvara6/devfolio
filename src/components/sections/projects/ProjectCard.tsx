@@ -7,10 +7,10 @@ export const ProjectCard = ({ data }: { data: Project }) => {
       <img
         src={data.img}
         alt={`Image of ${data.name}`}
-        className="object-cover w-full h-full"
+        className="object-cover w-full h-56"
         loading="lazy"
       />
-      <div className="p-4 flex justify-between border-t border-border">
+      <div className="p-4 flex justify-between">
         <div className="text-lg tracking-wider">{data.name}</div>
         <ChevronRightIcon className="w-5 text-accent-light" />
       </div>
