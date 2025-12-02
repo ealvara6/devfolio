@@ -17,11 +17,11 @@ export const Hero = () => {
             Full-Stack Developer & Tech Enthusiast
           </div>
         </div>
-        <div className="w-full text-lg flex flex-col gap-6 tracking-wide">
-          <button className="rounded-md w-full py-3 bg-accent border-2 border-accent">
+        <div className="w-full text-lg flex flex-col gap-6 tracking-wide items-center">
+          <button className="rounded-md w-full py-3 bg-accent border-2 border-accent max-w-2xl">
             View My Work
           </button>
-          <button className="rounded-md w-full py-3 border-[var(--color-accent-light)] border-2">
+          <button className="rounded-md w-full py-3 border-[var(--color-accent-light)] border-2 max-w-2xl">
             Contact Me
           </button>
         </div>
