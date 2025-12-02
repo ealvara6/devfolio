@@ -6,7 +6,7 @@ import { TechStack } from './techStack/TechStack';
 
 export const Sections = () => {
   return (
-    <main className="pb-16 w-full max-w-2xl mx-auto">
+    <main className="pb-16 w-full mx-auto">
       <Hero />
       <About />
       <TechStack />
