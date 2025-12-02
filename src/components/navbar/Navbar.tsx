@@ -2,8 +2,9 @@ import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { ThemeToggle } from '../ThemeToggle';
 import { useEffect, useState } from 'react';
 import { links, type ActiveProps } from '../../data/navLinks';
+import clsx from 'clsx';
 
-export const Navbar = () => {
+export const Navbar = ({ className }: { className?: string }) => {
   const [isActive, setIsActive] = useState<ActiveProps>('');
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,9 +20,12 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`min-h-14 items-center hidden sm:grid p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans fixed top-0 left-0 min-w-full z-10 transition-shadow  ${
-        scrolled ? 'backdrop-blur shadow-md' : 'backdrop-blur-none'
-      }`}
+      className={clsx(
+        `min-h-14 items-center p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans fixed top-0 left-0 min-w-full z-10 transition-shadow  ${
+          scrolled ? 'backdrop-blur shadow-md' : 'backdrop-blur-none'
+        }`,
+        className
+      )}
     >
       <div className="justify-self-start font-heading text-4xl font-bold :col-start-1">
         Alvarado
