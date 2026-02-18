@@ -2,10 +2,16 @@ import { withOpacity } from '@/utils/color';
 import { SECTIONS } from './section';
 import { TECH_REGISTRY } from './tech';
 import { SubHeading } from '@/components/shared/SubHeading';
+import clsx from 'clsx';
 
-export const TechStack = () => {
+export const TechStack = ({ className }: { className?: string }) => {
   return (
-    <section className="flex flex-col mx-7 gap-22 pt-14 lg:grid lg:grid-cols-2 lg:grid-rows-[100px_1fr_1fr] lg:items-center lg:gap-y-10 mb-14">
+    <section
+      className={clsx(
+        'flex flex-col lg:grid lg:grid-cols-2 lg:auto-rows-min lg:gap-y-10',
+        className,
+      )}
+    >
       <SubHeading className="self-center col-span-2 text-center">
         Technology
       </SubHeading>
@@ -13,17 +19,17 @@ export const TechStack = () => {
         console.log(SECTIONS.length, index);
         return (
           <div
-            className={`min-h-sm flex flex-col items-center ${
-              SECTIONS.length - 1 == index && 'lg:col-span-2'
+            className={`min-h-sm flex flex-col items-center min-h-full ${
+              index === 0 && 'lg:row-span-2'
             }`}
             key={section.key}
           >
             <h2 className="text-xl tracking-wider pb-3 self-center font-semibold text-accent-light/90">
               {section.name}
             </h2>
-            <div className="relative rounded-md py-10 min-h-72 px-4 flex items-center max-w-lg lg:max-w-xl w-full gap-y-2 gap-x-5 flex-wrap justify-center">
+            <div className="relative rounded-md py-10 px-4 flex flex-wrap justify-center items-center max-w-lg lg:max-w-xl w-full h-full gap-y-2 gap-x-5">
               <div className="h-full rounded-md absolute w-full inset-0 z-10 bg-accent bg-gradient-to-b from-emerald-400 via-teal-400 to-cyan-500" />
-              <div className="inset-[2px] bg-bg rounded-md absolute z-10" />
+              <div className="inset-[2px] bg-surface rounded-md absolute z-10" />
               {section.tech.map((techKey) => {
                 const tech = TECH_REGISTRY[techKey];
                 const from = withOpacity(tech.baseColor, 0.18);

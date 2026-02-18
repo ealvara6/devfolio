@@ -2,6 +2,7 @@ import headShot from '@/assets/headShot.png';
 import type React from 'react';
 import { CheckBadgeIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
+import { TechStack } from '../techStack/TechStack';
 
 export const About = () => {
   const Card = ({
@@ -22,10 +23,10 @@ export const About = () => {
 
   return (
     <section
-      className="min-h-screen flex flex-col gap-10 items-center pt-14 mx-7"
+      className="min-h-fit flex flex-col xl:grid xl:grid-cols-2 gap-10 items-center xl:items-start pt-14 px-7 mx-auto"
       id="about"
     >
-      <Card>
+      <Card className="row-span-2">
         <div className="gap-2 items-center flex flex-col">
           <img
             src={headShot}
@@ -68,6 +69,9 @@ export const About = () => {
             or in my projects.
           </div>
         </div>
+      </Card>
+      <Card className="h-full">
+        <TechStack className="gap-10" />
       </Card>
     </section>
   );
