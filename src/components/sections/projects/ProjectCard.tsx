@@ -18,7 +18,7 @@ export const ProjectCard = ({ data }: { data: Project }) => {
     );
   };
   return (
-    <div className="w-full min-h-72 bg-surface rounded-md relative flex flex-col justify-between">
+    <div className="w-full min-h-72 bg-surface rounded-md relative flex flex-col justify-between 2xl:max-w-3xl xl:max-w-xl  md:max-w-5xl">
       <img
         src={data.img}
         alt={`Image of ${data.name}`}

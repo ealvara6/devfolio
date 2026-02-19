@@ -7,7 +7,7 @@ export const Projects = () => {
     <section className="min-h-screen pt-14 mx-7" id="projects">
       <div className="flex flex-col gap-14">
         <SubHeading className="self-center">Projects</SubHeading>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap gap-8 lg:items-center lg:justify-center">
           {projectData.map((project) => {
             return <ProjectCard data={project} />;
           })}
