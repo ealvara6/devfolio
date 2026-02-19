@@ -7,7 +7,7 @@ import { EnvelopeIcon } from '@heroicons/react/24/outline';
 export const Contact = () => {
   return (
     <section
-      className="min-h-screen scroll-mt-20 mt-14 mx-7 text-center"
+      className="min-h-screen scroll-mt-20 mt-14 px-7 mx-auto text-center max-w-7xl"
       id="contact"
     >
       <div className="flex flex-col gap-9 bg-surface p-6 rounded-md">
