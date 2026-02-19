@@ -17,6 +17,7 @@ export const Navbar = ({ className }: { className?: string }) => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  console.log(links);
 
   return (
     <div
@@ -24,7 +25,7 @@ export const Navbar = ({ className }: { className?: string }) => {
         `min-h-14 items-center p-2 grid-cols-[1fr_2fr_1fr] justify-items-center font-sans fixed top-0 left-0 min-w-full z-10 transition-shadow  ${
           scrolled ? 'backdrop-blur shadow-md' : 'backdrop-blur-none'
         }`,
-        className
+        className,
       )}
     >
       <div className="justify-self-start font-heading text-4xl font-bold :col-start-1">
@@ -37,7 +38,7 @@ export const Navbar = ({ className }: { className?: string }) => {
             className="text-lg tracking-widest font-subHeading"
           >
             <a
-              href="#"
+              href={`#${link.name}`}
               onClick={() => setIsActive(link.name)}
               className={`rounded-full border-2 border-transparent [transition-property:border-color] hover:border-l-accent-hover hover:border-r-accent-hover transition-colors hover:text-accent-hover px-5 py-2 ${
                 isActive === link.name

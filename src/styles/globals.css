@@ -34,3 +34,7 @@
   --color-success: var(--color-emerald-400);
   --color-error: var(--color-red-400);
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -24,7 +24,7 @@ export const About = () => {
   return (
     <section
       className="min-h-fit flex flex-col xl:grid xl:grid-cols-2 gap-10 items-center xl:items-start pt-14 px-7 mx-auto"
-      id="about"
+      id="About"
     >
       <Card className="row-span-2">
         <div className="gap-2 items-center flex flex-col">
