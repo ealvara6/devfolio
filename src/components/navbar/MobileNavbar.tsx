@@ -1,18 +1,34 @@
 import { Bars3Icon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
+import {
+  DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+} from '../ui/dropdown-menu';
+import { Button } from '../ui/button';
+import { links } from '@/data/navLinks';
 
-export const MobileNavbar = ({ className }: { className?: string }) => {
+export const MobileNavbar = ({ className }: { className: string }) => {
   return (
-    <button
-      className={clsx(
-        'flex min-w-36 items-center justify-between py-3 px-3 rounded-full min-h-10 bg-white/5 backdrop-blur-md shadow-lg shadow-black/40',
-        className
-      )}
-    >
-      <div className="text-md tracking-wider font-heading font-medium">
-        Alvarado
-      </div>
-      <Bars3Icon className="w-6" />
-    </button>
+    <div className={className}>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button className="flex gap-4 min-w-36 text-lg tracking-wide group rounded-full min-h-12 bg-white/5 backdrop-blur-md shadow-lg shadow-black/40">
+            Alvarado
+            <Bars3Icon className="scale-150 transition-transform duration-300 group-data-[state=open]:rotate-90" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="bg-white/5 backdrop-blur-md shadow-lg shadow-black/40 border-none text-white">
+          <DropdownMenuGroup>
+            {links.map((link) => (
+              <DropdownMenuItem className="justify-center text-md">
+                <a href={`#${link.name}`}>{link.name}</a>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuGroup>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 };
