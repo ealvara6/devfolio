@@ -18,7 +18,6 @@ export const ThemeToggle = ({
   variant?: Variant;
 }) => {
   const { toggle, isDark } = useTheme();
-  console.log(isDark);
 
   return (
     <Switch
@@ -27,7 +26,7 @@ export const ThemeToggle = ({
       className={clsx(
         'group h-10 w-19 items-center rounded-full  transition shadow-md',
         className,
-        v[variant]
+        v[variant],
       )}
     >
       <div className="flex justify-between pr-2 relative">

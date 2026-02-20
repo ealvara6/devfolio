@@ -1,12 +1,13 @@
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { ThemeToggle } from '../ThemeToggle';
 import { useEffect, useState } from 'react';
-import { links, type ActiveProps } from '../../data/navLinks';
+import { links } from '../../data/navLinks';
 import clsx from 'clsx';
+import { useActiveSection } from '@/context/useActiveSection';
 
 export const Navbar = ({ className }: { className?: string }) => {
-  const [isActive, setIsActive] = useState<ActiveProps>('');
   const [scrolled, setScrolled] = useState(false);
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +18,6 @@ export const Navbar = ({ className }: { className?: string }) => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  console.log(links);
 
   return (
     <div
@@ -35,15 +35,14 @@ export const Navbar = ({ className }: { className?: string }) => {
         {links.map((link) => (
           <li
             key={link.name}
-            className="text-lg tracking-widest font-subHeading"
+            className={clsx(
+              'text-lg tracking-widest font-subHeading  rounded-xl p-2',
+            )}
           >
             <a
               href={`#${link.name}`}
-              onClick={() => setIsActive(link.name)}
-              className={`rounded-full border-2 border-transparent [transition-property:border-color] hover:border-l-accent-hover hover:border-r-accent-hover transition-colors hover:text-accent-hover px-5 py-2 ${
-                isActive === link.name
-                  ? 'border-l-accent-hover border-r-accent-hover text-accent-hover'
-                  : ''
+              className={`relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-accent after:transition-all after:duration-300 after:origin-center after:scale-x-0 hover:after:scale-x-100 px-5 py-2 ${
+                activeSection === link.name && 'after:scale-x-100'
               }`}
             >
               {link.name}

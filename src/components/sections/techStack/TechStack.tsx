@@ -16,7 +16,6 @@ export const TechStack = ({ className }: { className?: string }) => {
         Technology
       </SubHeading>
       {SECTIONS.map((section, index) => {
-        console.log(SECTIONS.length, index);
         return (
           <div
             className={`min-h-sm flex flex-col items-center min-h-full ${
