@@ -5,7 +5,7 @@ import { Projects } from './projects/Projects';
 
 export const Sections = () => {
   return (
-    <main className="pb-16 w-full mx-auto">
+    <main className="pb-16 max-w-full mx-auto">
       <Hero />
       <About />
       {/* <TechStack /> */}

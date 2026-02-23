@@ -23,15 +23,15 @@ export const About = () => {
 
   return (
     <section
-      className="min-h-fit flex flex-col xl:grid xl:grid-cols-2 gap-10 items-center xl:items-start pt-14 px-7 mx-auto"
+      className="min-h-fit sm:max-w-10/12 flex flex-col xl:grid xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
       id="About"
     >
-      <Card className="row-span-2">
-        <div className="gap-2 items-center flex flex-col">
+      <Card className="row-span-2 h-full flex flex-col">
+        <div className="gap-2 items-center flex flex-col flex-1">
           <img
             src={headShot}
             alt="head shot of Eduardo Alvarado"
-            className="rounded-xl"
+            className="rounded-xl h-full w-full object-cover"
           />
           <div className="text-center">
             <div className="text-xl tracking-wide font-semibold">
