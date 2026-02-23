@@ -24,7 +24,7 @@ export const Contact = () => {
           <img src={linkedinSvg} alt="Linkedin Icon" className="w-10" />
           <EnvelopeIcon className="w-10" />
         </div>
-        <Fieldset className="flex flex-col gap-7">
+        <Fieldset className="flex flex-col gap-7 text-text">
           <Input
             name="name"
             type="text"
