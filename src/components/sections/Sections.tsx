@@ -8,7 +8,6 @@ export const Sections = () => {
     <main className="pb-16 max-w-full mx-auto">
       <Hero />
       <About />
-      {/* <TechStack /> */}
       <Projects />
       <Contact />
     </main>

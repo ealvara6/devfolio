@@ -4,7 +4,7 @@ import { projectData } from './projectData';
 
 export const Projects = () => {
   return (
-    <section className="min-h-screen pt-14 px-7 mx-auto" id="Projects">
+    <section className="min-h-fit my-28 px-7 mx-auto" id="Projects">
       <div className="flex flex-col gap-14">
         <SubHeading className="self-center">Projects</SubHeading>
         <div className="flex flex-col lg:flex-row lg:flex-wrap gap-8 lg:items-center lg:justify-center">
