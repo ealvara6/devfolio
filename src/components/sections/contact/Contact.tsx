@@ -12,11 +12,11 @@ import { MapPinIcon } from '@heroicons/react/24/outline';
 export const Contact = () => {
   return (
     <section
-      className="min-h-screen sm:max-w-7xl scroll-mt-20 mt-14 px-7 mx-auto text-center max-w-7xl"
+      className="min-h-screen sm:max-w-10/12 scroll-mt-20 mt-14 px-7 mx-auto text-center max-w-7xl"
       id="Contact"
     >
-      <div className="flex flex-col gap-9 bg-surface p-6 rounded-md md:grid md:grid-cols-2">
-        <div className="relative flex flex-col items-center justify-around">
+      <div className="flex flex-col gap-9 bg-surface p-10 rounded-md lg:grid lg:grid-cols-2">
+        <div className="relative flex flex-col items-center justify-around gap-8">
           <div>
             <SubHeading>Get In Touch</SubHeading>
             <div className="w-64 mx-auto mt-2 h-[2px] bg-gradient-to-r from-emerald-400/80 via-teal-400/80 to-cyan-500/80 rounded-full" />
@@ -25,26 +25,35 @@ export const Contact = () => {
             I'm always open to new opportunities, collaborations, or questions
             about my work. Feel free to reach out!
           </div>
-          <div className="flex flex-col gap-5 text-sm  text-start w-full">
-            <p className="border p-2 rounded-md text-lg flex gap-2 border-accent py-4">
+          <div className=" flex-col gap-5 text-sm  text-start w-full md:flex hidden">
+            <p className="border p-2 rounded-md text-lg flex gap-2  py-4">
               <MapPinIcon className="w-6 text-accent-light" /> Houston, TX
             </p>
-            <p className="border p-2 rounded-md text-lg flex gap-2 border-accent py-4">
+            <p className="border p-2 rounded-md text-lg flex gap-2  py-4">
               <BriefcaseIcon className="w-6 text-accent-light" /> Open to Junior
               / Entry-Level roles
             </p>
-            <p className="border p-2 rounded-md text-lg flex gap-2 border-accent py-4">
+            <p className="border p-2 rounded-md text-lg flex gap-2  py-4">
               <ClockIcon className="w-6 text-accent-light" /> Usually responds
               within 24 hours
             </p>
           </div>
-          <div className="flex justify-center gap-12">
-            <img src={githubSvg} alt="Github Icon" className="w-10" />
-            <img src={linkedinSvg} alt="Linkedin Icon" className="w-10" />
-            <EnvelopeIcon className="w-10" />
+          <div className="flex justify-between w-full gap-12">
+            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center">
+              <img src={githubSvg} alt="Github Icon" className="w-10" />
+              <div className="hidden md:block">Github</div>
+            </div>
+            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center">
+              <img src={linkedinSvg} alt="Linkedin Icon" className="w-10" />
+              <div className="hidden md:block">LinkedIn</div>
+            </div>
+            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center">
+              <EnvelopeIcon className="w-10" />
+              <div className="hidden md:block">Email</div>
+            </div>
           </div>
         </div>
-        <Fieldset className="flex flex-col gap-7 text-text">
+        <Fieldset className="flex flex-col gap-7 text-text justify-between">
           <Input
             name="name"
             type="text"
