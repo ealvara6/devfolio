@@ -46,7 +46,7 @@ export const About = () => {
           </button>
         </div>
       </Card>
-      <Card className="flex flex-col gap-2">
+      <Card className="flex flex-col py-12">
         <div>
           <div className="text-3xl font-semibold tracking-wider pb-0.5">
             About Me
@@ -70,7 +70,7 @@ export const About = () => {
           </div>
         </div>
       </Card>
-      <Card className="h-full">
+      <Card className="min-h-full flex flex-col justify-center">
         <TechStack className="gap-10" />
       </Card>
     </section>
