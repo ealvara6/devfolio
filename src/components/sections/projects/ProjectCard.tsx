@@ -17,7 +17,7 @@ export const ProjectCard = ({ data }: { data: Project }) => {
     );
   };
   return (
-    <div className="lg:w-xl h-[450px] bg-surface rounded-md relative flex flex-col justify-between 2xl:max-w-3xl xl:max-w-xl  md:max-w-5xl">
+    <div className="lg:w-xl h-[470px] bg-surface rounded-md relative flex flex-col justify-between 2xl:max-w-3xl xl:max-w-xl  md:max-w-5xl">
       <div className="relative">
         <img
           src={data.img}
@@ -37,7 +37,7 @@ export const ProjectCard = ({ data }: { data: Project }) => {
           {data.desc}
         </div>
         <Tech tech={data.tech} />
-        <div className="flex gap-4 justify-center pb-4">
+        <div className="flex gap-4 justify-center pb-6">
           <button className=" py-3 w-36 bg-accent rounded-lg">
             Live Preview
           </button>

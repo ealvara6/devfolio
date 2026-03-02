@@ -26,7 +26,7 @@ export const About = () => {
       className="min-h-fit sm:max-w-10/12 pb-20 flex flex-col xl:grid xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
       id="About"
     >
-      <Card className="row-span-2 h-full flex flex-col">
+      <Card className="row-span-2 max-h-full flex flex-col max-w-4xl self-center mx-auto">
         <div className="gap-2 items-center flex flex-col flex-1">
           <img
             src={headShot}
@@ -52,15 +52,19 @@ export const About = () => {
             About Me
           </div>
           <div className="text-xs text-accent font-light tracking-wide flex items-center gap-0.5">
-            <CheckBadgeIcon className="w-4" /> Available for Hire
+            <CheckBadgeIcon className="w-4 pb-1" /> Available for Hire
           </div>
         </div>
         <div className="w-full border border-accent" />
         <div>
-          <div className="pb-5 text-base tracking-tight">
+          <div className="pb-5 text-base tracking-tight pt-4">
             I'm Eduardo, a web developer with a degree in Management Information
             Systems from the University of Houston. I focus on building modern,
-            responsive web applications that follow today's best practices.
+            responsive web applications using React, Typescript, Node.js, and
+            PostgeSQL that follow today's best practices. I am searching for a
+            junior front-end or full stack development role where I can
+            contribute to real world products and allows for professional and
+            technical growth.
           </div>
           <div className=" text-base tracking-tight">
             When I'm not coding, you'll usually find me at the gym or
