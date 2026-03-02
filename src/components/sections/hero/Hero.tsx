@@ -1,4 +1,5 @@
 import Memoji from '@/assets/Memoji.png';
+import { Button } from '@/components/shared/Button';
 
 export const Hero = () => {
   return (
@@ -21,12 +22,10 @@ export const Hero = () => {
           </div>
         </div>
         <div className="w-full text-lg flex flex-col gap-6 tracking-wide items-center">
-          <button className="rounded-md w-full py-3 bg-accent border-2 border-accent max-w-2xl">
-            View My Work
-          </button>
-          <button className="rounded-md w-full py-3 border-[var(--color-accent-light)] border-2 max-w-2xl">
+          <Button className="w-full max-w-2xl">View My Work</Button>
+          <Button className="w-full max-w-2xl" variant="outline">
             Contact Me
-          </button>
+          </Button>
         </div>
       </div>
     </section>

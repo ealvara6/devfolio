@@ -1,3 +1,4 @@
+import { Button } from '@/components/shared/Button';
 import type { Project } from './projectData';
 
 export const ProjectCard = ({ data }: { data: Project }) => {
@@ -38,12 +39,10 @@ export const ProjectCard = ({ data }: { data: Project }) => {
         </div>
         <Tech tech={data.tech} />
         <div className="flex gap-4 justify-center pb-6">
-          <button className=" py-3 w-36 bg-accent rounded-lg">
-            Live Preview
-          </button>
-          <button className="border py-3 w-36 border-accent-light rounded-lg">
-            <div className="relative">Code</div>
-          </button>
+          <Button className="w-36">Live Preview</Button>
+          <Button className="w-36" variant="outline">
+            Code
+          </Button>
         </div>
       </div>
     </div>

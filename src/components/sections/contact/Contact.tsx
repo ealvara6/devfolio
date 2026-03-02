@@ -1,5 +1,5 @@
 import { SubHeading } from '@/components/shared/SubHeading';
-import { Button, Fieldset, Input, Textarea } from '@headlessui/react';
+import { Fieldset, Input, Textarea } from '@headlessui/react';
 import githubSvg from '@/assets/github.svg';
 import linkedinSvg from '@/assets/linkedin.svg';
 import {
@@ -8,6 +8,7 @@ import {
   EnvelopeIcon,
 } from '@heroicons/react/24/outline';
 import { MapPinIcon } from '@heroicons/react/24/outline';
+import { Button } from '@/components/shared/Button';
 
 export const Contact = () => {
   return (
@@ -39,15 +40,15 @@ export const Contact = () => {
             </p>
           </div>
           <div className="flex justify-between w-full gap-12">
-            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center">
+            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none">
               <img src={githubSvg} alt="Github Icon" className="w-10" />
               <div className="hidden md:block">Github</div>
             </div>
-            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center">
+            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none">
               <img src={linkedinSvg} alt="Linkedin Icon" className="w-10" />
               <div className="hidden md:block">LinkedIn</div>
             </div>
-            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center">
+            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none">
               <EnvelopeIcon className="w-10" />
               <div className="hidden md:block">Email</div>
             </div>
@@ -71,9 +72,8 @@ export const Contact = () => {
             className="px-3 py-3.5 rounded-lg bg-border resize-none h-48"
             placeholder="Message"
           />
-          <Button className="bg-gradient-to-r from-emerald-500 to-emerald-400 p-3.5 rounded-xl text-xl font-semibold tracking-wider">
-            Submit
-          </Button>
+          <Button className="text-xl font-semibold py-4">Submit</Button>
+
           <div className="text-text-muted text-sm">
             Prefer email? You can reach me at{' '}
             <a
