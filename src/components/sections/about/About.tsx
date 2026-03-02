@@ -3,6 +3,7 @@ import type React from 'react';
 import { CheckBadgeIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { TechStack } from '../techStack/TechStack';
+import { Button } from '@/components/shared/Button';
 
 export const About = () => {
   const Card = ({
@@ -41,9 +42,7 @@ export const About = () => {
               Jr. Full Stack Web Developer
             </div>
           </div>
-          <button className="w-full border py-3 border-accent bg-accent rounded-md text-lg mt-3">
-            Download CV
-          </button>
+          <Button className="w-full py-3 mt-3">Download CV</Button>
         </div>
       </Card>
       <Card className="flex flex-col py-12">
