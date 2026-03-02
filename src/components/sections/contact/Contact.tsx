@@ -12,10 +12,10 @@ import { MapPinIcon } from '@heroicons/react/24/outline';
 export const Contact = () => {
   return (
     <section
-      className=" sm:max-w-7/12 scroll-mt-20 pt-20 pb-20 px-7 mx-auto text-center max-w-7xl"
+      className=" scroll-mt-20 pt-30 pb-30 px-7 mx-auto text-center sm:max-w-4xl xl:max-w-7xl"
       id="Contact"
     >
-      <div className="flex flex-col gap-9 bg-surface p-10 rounded-md lg:grid lg:grid-cols-2">
+      <div className="flex flex-col gap-9 bg-surface p-10 rounded-md xl:grid xl:grid-cols-2">
         <div className="relative flex flex-col items-center justify-around gap-8">
           <div>
             <SubHeading>Get In Touch</SubHeading>
