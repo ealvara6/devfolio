@@ -39,7 +39,9 @@ export const ProjectCard = ({ data }: { data: Project }) => {
         </div>
         <Tech tech={data.tech} />
         <div className="flex gap-4 justify-center pb-6">
-          <Button className="w-36">Live Preview</Button>
+          <Button className="w-36" href={data.url} target="_blank">
+            Live Preview
+          </Button>
           <Button className="w-36" variant="outline">
             Code
           </Button>
