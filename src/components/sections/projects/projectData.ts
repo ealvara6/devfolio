@@ -13,6 +13,7 @@ export type Project = {
   name: string;
   tagline: string;
   url: string;
+  github: string;
   desc: string;
   tech: string[];
   meta: MetaProps;
@@ -24,6 +25,7 @@ export const projectData: Project[] = [
     name: 'Postfily',
     tagline: 'Full-stack blogging platform',
     url: 'https://www.postifly.blog',
+    github: 'https://github.com/ealvara6/blog-post',
     meta: {
       role: 'full-stack',
       year: '2025',
@@ -38,6 +40,7 @@ export const projectData: Project[] = [
     name: 'PokeMem',
     tagline: 'Memory game',
     url: 'https://poke-mem-xi.vercel.app/',
+    github: 'https://github.com/ealvara6/Poke-Mem',
     meta: {
       role: 'front-end',
       year: '2023',
@@ -51,6 +54,7 @@ export const projectData: Project[] = [
     name: 'Battleship',
     tagline: 'Online battleship',
     url: 'https://battleship-eight.vercel.app/',
+    github: 'https://github.com/ealvara6/battleship',
     meta: {
       role: 'front-end',
       year: '2021',

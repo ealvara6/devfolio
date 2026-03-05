@@ -42,7 +42,12 @@ export const ProjectCard = ({ data }: { data: Project }) => {
           <Button className="w-36" href={data.url} target="_blank">
             Live Preview
           </Button>
-          <Button className="w-36" variant="outline">
+          <Button
+            className="w-36"
+            variant="outline"
+            href={data.github}
+            target="_blank"
+          >
             Code
           </Button>
         </div>
