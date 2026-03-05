@@ -22,8 +22,14 @@ export const Hero = () => {
           </div>
         </div>
         <div className="w-full text-lg flex flex-col gap-6 tracking-wide items-center">
-          <Button className="w-full max-w-2xl">View My Work</Button>
-          <Button className="w-full max-w-2xl" variant="outline">
+          <Button href="#Projects" className="w-full max-w-2xl">
+            View My Work
+          </Button>
+          <Button
+            className="w-full max-w-2xl"
+            href="#Contact"
+            variant="outline"
+          >
             Contact Me
           </Button>
         </div>
