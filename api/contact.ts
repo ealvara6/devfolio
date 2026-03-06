@@ -2,6 +2,7 @@ import { Resend } from 'resend';
 export default async function handler(req: any, res: any) {
   try {
     const { name, email, message } = req.body;
+    console.log(name, email, message);
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
