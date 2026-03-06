@@ -9,8 +9,32 @@ import {
 } from '@heroicons/react/24/outline';
 import { MapPinIcon } from '@heroicons/react/24/outline';
 import { Button } from '@/components/shared/Button';
+import type React from 'react';
+import { useState } from 'react';
 
 export const Contact = () => {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error ?? 'Failed to send');
+    }
+  };
+
   return (
     <section
       className=" scroll-mt-20 pt-30 pb-30 px-7 mx-auto text-center sm:max-w-4xl xl:max-w-7xl"
@@ -40,50 +64,74 @@ export const Contact = () => {
             </p>
           </div>
           <div className="flex justify-between w-full gap-12">
-            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none">
+            <a
+              href="https://github.com/ealvara6"
+              target="_blank"
+              className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
+            >
               <img src={githubSvg} alt="Github Icon" className="w-10" />
               <div className="hidden md:block">Github</div>
-            </div>
-            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ealvara6/"
+              target="_blank"
+              className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
+            >
               <img src={linkedinSvg} alt="Linkedin Icon" className="w-10" />
               <div className="hidden md:block">LinkedIn</div>
-            </div>
-            <div className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none">
-              <EnvelopeIcon className="w-10" />
-              <div className="hidden md:block">Email</div>
-            </div>
-          </div>
-        </div>
-        <Fieldset className="flex flex-col gap-7 text-text justify-between">
-          <Input
-            name="name"
-            type="text"
-            className="px-3 py-3.5 rounded-lg bg-border"
-            placeholder="Full Name"
-          />
-          <Input
-            name="email"
-            type="text"
-            className="px-3 py-3.5 rounded-lg bg-border"
-            placeholder="Email"
-          />
-          <Textarea
-            name="message"
-            className="px-3 py-3.5 rounded-lg bg-border resize-none h-48"
-            placeholder="Message"
-          />
-          <Button className="text-xl font-semibold py-4">Submit</Button>
-
-          <div className="text-text-muted text-sm">
-            Prefer email? You can reach me at{' '}
+            </a>
             <a
               href="mailto:ealvara73@gmail.com"
-              className="text-accent-light hover:underline"
+              className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
             >
-              ealvara73@gmail.com
+              <EnvelopeIcon className="w-10" />
+              <div className="hidden md:block">Email</div>
             </a>
           </div>
-        </Fieldset>
+        </div>
+        <form action="POST" onSubmit={handleSubmit}>
+          <Fieldset className="flex flex-col gap-7 text-text justify-between">
+            <Input
+              name="name"
+              type="text"
+              className="px-3 py-3.5 rounded-lg bg-border"
+              placeholder="Full Name"
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, name: e.target.value }))
+              }
+            />
+            <Input
+              name="email"
+              type="text"
+              className="px-3 py-3.5 rounded-lg bg-border"
+              placeholder="Email"
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, email: e.target.value }))
+              }
+            />
+            <Textarea
+              name="message"
+              className="px-3 py-3.5 rounded-lg bg-border resize-none h-48"
+              placeholder="Message"
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, message: e.target.value }))
+              }
+            />
+            <Button className="text-xl font-semibold py-4" type="submit">
+              Submit
+            </Button>
+
+            <div className="text-text-muted text-sm">
+              Prefer email? You can reach me at{' '}
+              <a
+                href="mailto:ealvara73@gmail.com"
+                className="text-accent-light hover:underline"
+              >
+                ealvara73@gmail.com
+              </a>
+            </div>
+          </Fieldset>
+        </form>
       </div>
     </section>
   );

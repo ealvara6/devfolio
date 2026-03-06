@@ -10,7 +10,6 @@ export const useActiveSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(entry.target.id);
             setActive(entry.target.id);
           }
         });
