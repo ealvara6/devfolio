@@ -11,6 +11,7 @@ import { MapPinIcon } from '@heroicons/react/24/outline';
 import { Button } from '@/components/shared/Button';
 import type React from 'react';
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const Contact = () => {
   const [form, setForm] = useState({
@@ -19,20 +20,26 @@ export const Contact = () => {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
     });
-    console.log(res);
 
     const data = await res.json();
 
     if (!res.ok) {
+      setIsSubmitting(false);
       throw new Error(data.error ?? 'Failed to send');
+    } else {
+      setIsSubmitting(false);
+      toast.success('Successfully Sent!');
     }
   };
 
@@ -118,8 +125,20 @@ export const Contact = () => {
                 setForm((prev) => ({ ...prev, message: e.target.value }))
               }
             />
-            <Button className="text-xl font-semibold py-4" type="submit">
-              Submit
+            <Button
+              className={`text-xl font-semibold gap-2 py-4 disabled:bg-none disabled:bg-muted-foreground disabled:border-muted-foreground disabled:hover:translate-none disabled:cursor-default disabled:duration-0`}
+              disabled={isSubmitting}
+              type="submit"
+              variant="primary"
+            >
+              {isSubmitting ? (
+                <div className="flex gap-2 justify-center items-center">
+                  <div className="w-6 h-6 rounded-full border-t-accent animate-spin border-4 border-border"></div>
+                  <div>Sending...</div>
+                </div>
+              ) : (
+                'Send'
+              )}
             </Button>
 
             <div className="text-text-muted text-sm">
@@ -133,6 +152,7 @@ export const Contact = () => {
             </div>
           </Fieldset>
         </form>
+        <Toaster position="bottom-center" />
       </div>
     </section>
   );
