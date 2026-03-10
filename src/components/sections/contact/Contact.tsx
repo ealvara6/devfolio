@@ -26,20 +26,30 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    });
-
-    const data = await res.json();
-
-    if (!res.ok) {
+    if (!form.name || !form.email || !form.message) {
+      toast.error('Please fill out all fields');
       setIsSubmitting(false);
-      throw new Error(data.error ?? 'Failed to send');
-    } else {
-      setIsSubmitting(false);
-      toast.success('Successfully Sent!');
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        setIsSubmitting(false);
+        throw new Error(`Request failed: ${res.status}`);
+      } else {
+        setIsSubmitting(false);
+        toast.success('Successfully Sent!');
+      }
+    } catch (err) {
+      if (err instanceof Error) {
+        throw new Error(err.message);
+      }
+      throw new Error('Failed to send');
     }
   };
 
