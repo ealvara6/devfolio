@@ -8,7 +8,7 @@ export const ProjectCard = ({ data }: { data: Project }) => {
         {tech.map((name) => {
           return (
             <div className="flex items-start">
-              <div className="font-bold border rounded-full px-6 py-1.5 border-accent text-accent-light bg-accent/20">
+              <div className="font-bold border rounded-full px-6 py-1.5 border-accent text-accent-light bg-accent/20 text-xs sm:text-base">
                 {name}
               </div>
             </div>
