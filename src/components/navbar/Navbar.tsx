@@ -1,5 +1,4 @@
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
-import { ThemeToggle } from '../ThemeToggle';
 import { useEffect, useState } from 'react';
 import { links } from '../../data/navLinks';
 import clsx from 'clsx';
@@ -54,7 +53,6 @@ export const Navbar = ({ className }: { className?: string }) => {
         <button className="border cursor-pointer shadow-md hover:-translate-y-0.5 text-sm hover:translate-x-0.5 transition border-border  p-3 rounded-full bg-accent hover:bg-accent-hover active:translate-0">
           <EnvelopeIcon className="w-6 h-6 text-white" aria-label="Contact" />
         </button>
-        <ThemeToggle className="block" variant="bg2" />
       </div>
     </div>
   );
