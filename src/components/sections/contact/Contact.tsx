@@ -85,7 +85,7 @@ export const Contact = () => {
             <a
               href="https://github.com/ealvara6"
               target="_blank"
-              className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
+              className="border py-4 md:py-2 sm:px-8 w-full rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
             >
               <img src={githubSvg} alt="Github Icon" className="w-10" />
               <div className="hidden md:block">Github</div>
@@ -93,14 +93,14 @@ export const Contact = () => {
             <a
               href="https://www.linkedin.com/in/ealvara6/"
               target="_blank"
-              className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
+              className="border py-4 md:py-2 sm:px-8 w-full rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
             >
               <img src={linkedinSvg} alt="Linkedin Icon" className="w-10" />
               <div className="hidden md:block">LinkedIn</div>
             </a>
             <a
               href="mailto:ealvara73@gmail.com"
-              className="md:border py-2 sm:px-8 w-full md:rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
+              className="border py-4 md:py-2 sm:px-8 w-full rounded-md md:hover:border-accent flex flex-col gap-2 items-center hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 active:translate-0 cursor-pointer select-none"
             >
               <EnvelopeIcon className="w-10" />
               <div className="hidden md:block">Email</div>
