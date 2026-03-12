@@ -42,7 +42,9 @@ export const About = () => {
               Jr. Full Stack Web Developer
             </div>
           </div>
-          <Button className="w-full mt-3">Download CV</Button>
+          <a href="/Resume.pdf" className="w-full" download>
+            <Button className="w-full mt-3">Download CV</Button>
+          </a>
         </div>
       </Card>
       <Card className="flex flex-col py-12">
