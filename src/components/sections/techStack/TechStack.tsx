@@ -34,9 +34,11 @@ export const TechStack = ({ className }: { className?: string }) => {
                 const from = withOpacity(tech.baseColor, 0.18);
                 const to = withOpacity(tech.baseColor, 0.05);
                 return (
-                  <div
+                  <a
                     key={tech.key}
-                    className={`w-20 h-20 flex flex-col justify-center rounded-md items-center z-20`}
+                    className={`w-20 h-20 flex flex-col justify-center rounded-md items-center z-20 group hover:cursor-pointer`}
+                    href={tech.url}
+                    target="_blank"
                     style={{
                       background: `linear-gradient(to bottom, ${from}, ${to})`,
                     }}
@@ -44,9 +46,9 @@ export const TechStack = ({ className }: { className?: string }) => {
                     <img
                       src={tech.icon}
                       alt={`${tech.name} Icon`}
-                      className="w-10"
+                      className="w-10 group-hover:scale-110 transition-all"
                     />
-                  </div>
+                  </a>
                 );
               })}
             </div>

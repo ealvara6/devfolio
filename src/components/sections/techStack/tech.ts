@@ -46,104 +46,127 @@ export type TechInfo = {
   name: string;
   icon: string;
   baseColor: string;
+  url: string;
 };
 
 export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
-  react: { key: 'react', name: 'React', icon: reactSvg, baseColor: blue },
+  react: {
+    key: 'react',
+    name: 'React',
+    icon: reactSvg,
+    baseColor: blue,
+    url: 'https://react.dev/',
+  },
   typescript: {
     key: 'typescript',
     name: 'Typescript',
     icon: tsSvg,
     baseColor: blue,
+    url: 'https://www.typescriptlang.org/',
   },
   tailwindcss: {
     key: 'tailwindcss',
     name: 'Tailwindcss',
     icon: tailwindcssSvg,
     baseColor: blue,
+    url: 'https://tailwindcss.com/',
   },
   reactQuery: {
     key: 'reactQuery',
     name: 'React Query',
     icon: reactQuerySvg,
     baseColor: red,
+    url: 'https://www.npmjs.com/package/react-query',
   },
   zod: {
     key: 'zod',
     name: 'Zod',
     icon: zodSvg,
     baseColor: blue,
+    url: 'https://zod.dev/',
   },
   html5: {
     key: 'html5',
     name: 'Html5',
     icon: html5Svg,
     baseColor: red,
+    url: 'https://html.spec.whatwg.org/',
   },
   css3: {
     key: 'css3',
     name: 'Css3',
     icon: css3Svg,
     baseColor: blue,
+    url: 'https://www.w3.org/Style/CSS/',
   },
   vite: {
     key: 'vite',
     name: 'Vite',
     icon: viteSvg,
     baseColor: purple,
+    url: 'https://vite.dev/',
   },
   nodejs: {
     key: 'nodejs',
     name: 'NodeJS',
     icon: nodeJSSvg,
     baseColor: green,
+    url: 'https://nodejs.org/en',
   },
   prisma: {
     key: 'prisma',
     name: 'Prisma',
     icon: prismaSvg,
     baseColor: blue,
+    url: 'https://www.prisma.io/',
   },
   jwt: {
     key: 'jwt',
     name: 'Json Web Token',
     icon: jwtSvg,
     baseColor: purple,
+    url: 'https://www.jwt.io/',
   },
   github: {
     key: 'github',
     name: 'Github',
     icon: githubSvg,
     baseColor: grey,
+    url: 'https://github.com/',
   },
   vercel: {
     key: 'vercel',
     name: 'Vercel',
     icon: vercelSvg,
     baseColor: grey,
+    url: 'https://vercel.com/',
   },
   railway: {
     key: 'railway',
     name: 'Railway',
     icon: railwaySvg,
     baseColor: grey,
+    url: 'https://railway.com/',
   },
   npm: {
     key: 'npm',
     name: 'npm',
     icon: npmSvg,
     baseColor: red,
+    url: 'https://www.npmjs.com/',
   },
   eslint: {
     key: 'eslint',
     name: 'ESlint',
     icon: eslintSvg,
     baseColor: purple,
+    url: 'https://eslint.org/',
   },
   prettier: {
     key: 'prettier',
     name: 'Prettier',
     icon: prettierSvg,
     baseColor: red,
+    url: 'https://prettier.io/',
   },
 };
