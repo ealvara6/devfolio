@@ -58,7 +58,7 @@ export const Contact = () => {
       className=" scroll-mt-20 pt-30 pb-30 px-7 mx-auto text-center sm:max-w-4xl xl:max-w-7xl"
       id="Contact"
     >
-      <div className="flex flex-col gap-9 bg-surface p-10 rounded-md xl:grid xl:grid-cols-2">
+      <div className="flex flex-col gap-9 bg-surface px-4 py-10 md:p-10 rounded-md xl:grid xl:grid-cols-2">
         <div className="relative flex flex-col items-center justify-around gap-8">
           <div>
             <SubHeading>Get In Touch</SubHeading>
@@ -81,7 +81,7 @@ export const Contact = () => {
               within 24 hours
             </p>
           </div>
-          <div className="flex justify-between w-full gap-12">
+          <div className="flex justify-between w-full gap-6 md:gap-12">
             <a
               href="https://github.com/ealvara6"
               target="_blank"
