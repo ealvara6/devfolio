@@ -1,6 +1,6 @@
 import { SubHeading } from '@/components/shared/SubHeading';
 import { Fieldset, Input, Textarea } from '@headlessui/react';
-import githubSvg from '@/assets/github.svg';
+import githubSvg from '@/assets/tech-icons/github.svg';
 import linkedinSvg from '@/assets/linkedin.svg';
 import {
   BriefcaseIcon,
