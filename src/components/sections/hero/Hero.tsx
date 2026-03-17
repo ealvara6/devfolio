@@ -8,7 +8,7 @@ export const Hero = () => {
       id="Hero"
     >
       <div className="absolute inset-0 bg-black/10 -z-10 bg-gradient-to-b from-transparent to-bg pointer-events-none"></div>
-      <div className="mx-7 pt-64 flex flex-col gap-2 justify-center items-center text-text">
+      <div className="mx-7 pt-32 md:pt-64 flex flex-col gap-2 justify-center items-center text-text">
         <div className="border w-48 h-48 md:w-64 md:h-64 bg-surface border-border rounded-full flex justify-center items-center">
           <img
             src={Memoji}
