@@ -48,7 +48,10 @@ export const TechStack = ({ className }: { className?: string }) => {
                       alt={`${tech.name} Icon`}
                       className={`w-10 group-hover:${tech.hoverTranslateY || '-translate-y-2/12'} transition-all`}
                     />
-                    <div className="absolute text-xs text-center opacity-0 translate-y-9 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-6">
+                    <div
+                      className="absolute tracking-wider
+                     text-xs text-center opacity-0 translate-y-9 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-6"
+                    >
                       {tech.name}
                     </div>
                   </a>
