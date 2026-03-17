@@ -47,6 +47,7 @@ export type TechInfo = {
   icon: string;
   baseColor: string;
   url: string;
+  hoverTranslateY?: string;
 };
 
 export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
@@ -119,6 +120,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: prismaSvg,
     baseColor: blue,
     url: 'https://www.prisma.io/',
+    hoverTranslateY: '-translate-y-3/12',
   },
   jwt: {
     key: 'jwt',
@@ -126,6 +128,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: jwtSvg,
     baseColor: purple,
     url: 'https://www.jwt.io/',
+    hoverTranslateY: '-translate-y-4/12',
   },
   github: {
     key: 'github',
@@ -133,6 +136,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: githubSvg,
     baseColor: grey,
     url: 'https://github.com/',
+    hoverTranslateY: '-translate-y-3/12',
   },
   vercel: {
     key: 'vercel',
@@ -147,6 +151,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: railwaySvg,
     baseColor: grey,
     url: 'https://railway.com/',
+    hoverTranslateY: '-translate-y-3/12',
   },
   npm: {
     key: 'npm',

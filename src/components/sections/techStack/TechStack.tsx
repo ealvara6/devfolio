@@ -36,7 +36,7 @@ export const TechStack = ({ className }: { className?: string }) => {
                 return (
                   <a
                     key={tech.key}
-                    className={`w-20 h-20 flex flex-col justify-center rounded-md items-center z-20 group hover:cursor-pointer`}
+                    className={`w-20 h-20 flex justify-center relative items-center rounded-md z-20 hover:scale-125 transition-all duration-300 hover:cursor-pointer group overflow-hidden`}
                     href={tech.url}
                     target="_blank"
                     style={{
@@ -46,8 +46,11 @@ export const TechStack = ({ className }: { className?: string }) => {
                     <img
                       src={tech.icon}
                       alt={`${tech.name} Icon`}
-                      className="w-10 group-hover:scale-110 transition-all"
+                      className={`w-10 group-hover:${tech.hoverTranslateY || '-translate-y-2/12'} transition-all`}
                     />
+                    <div className="absolute text-xs text-center opacity-0 translate-y-9 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-6">
+                      {tech.name}
+                    </div>
                   </a>
                 );
               })}
