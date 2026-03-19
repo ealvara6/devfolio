@@ -4,6 +4,12 @@ import { TECH_REGISTRY } from './tech';
 import { SubHeading } from '@/components/shared/SubHeading';
 import clsx from 'clsx';
 
+const translateMap = {
+  small: 'group-hover:-translate-y-2/12',
+  medium: 'group-hover:-translate-y-3/12',
+  large: 'group-hover:-translate-y-4/12',
+};
+
 export const TechStack = ({ className }: { className?: string }) => {
   return (
     <section
@@ -26,7 +32,7 @@ export const TechStack = ({ className }: { className?: string }) => {
             <h2 className="text-xl tracking-wider pb-3 self-center font-semibold text-accent-light/90">
               {section.name}
             </h2>
-            <div className="relative rounded-md p-4 flex flex-wrap justify-center items-center max-w-lg lg:max-w-xl w-full h-full gap-y-2 gap-x-5">
+            <div className="relative rounded-md p-4 flex flex-wrap justify-center items-center max-w-lg lg:max-w-xl w-full h-full gap-y-4 gap-x-5">
               <div className="h-full rounded-md absolute w-full inset-0 z-10 bg-accent bg-gradient-to-b from-emerald-400 via-teal-400 to-cyan-500" />
               <div className="inset-[2px] bg-surface rounded-md absolute z-10" />
               {section.tech.map((techKey) => {
@@ -36,7 +42,7 @@ export const TechStack = ({ className }: { className?: string }) => {
                 return (
                   <a
                     key={tech.key}
-                    className={`w-20 h-20 flex justify-center relative items-center rounded-md z-20 hover:scale-125 transition-all duration-300 hover:cursor-pointer group overflow-hidden`}
+                    className={`w-20 h-20 md:w-24 md:h-24 flex justify-center relative items-center rounded-md z-20 hover:scale-125 transition-all duration-300 hover:cursor-pointer group overflow-hidden`}
                     href={tech.url}
                     target="_blank"
                     style={{
@@ -46,11 +52,11 @@ export const TechStack = ({ className }: { className?: string }) => {
                     <img
                       src={tech.icon}
                       alt={`${tech.name} Icon`}
-                      className={`w-10 group-hover:${tech.hoverTranslateY || '-translate-y-2/12'} transition-all`}
+                      className={`w-10 md:w-12 ${translateMap[tech.hoverTranslateY || 'medium']} transition-all`}
                     />
                     <div
                       className="absolute tracking-wider
-                     text-xs text-center opacity-0 translate-y-9 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-6"
+                     text-xs text-center opacity-0 translate-y-14 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-8"
                     >
                       {tech.name}
                     </div>

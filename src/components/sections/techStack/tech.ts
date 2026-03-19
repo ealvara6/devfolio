@@ -22,6 +22,8 @@ const purple = '#9810fa';
 const green = '#00a63e';
 const grey = '#9f9fa9';
 
+type hoverTranslateY = 'small' | 'medium' | 'large';
+
 export type TechKey =
   | 'react'
   | 'typescript'
@@ -47,7 +49,7 @@ export type TechInfo = {
   icon: string;
   baseColor: string;
   url: string;
-  hoverTranslateY?: string;
+  hoverTranslateY?: hoverTranslateY;
 };
 
 export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
@@ -71,6 +73,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: tailwindcssSvg,
     baseColor: blue,
     url: 'https://tailwindcss.com/',
+    hoverTranslateY: 'small',
   },
   reactQuery: {
     key: 'reactQuery',
@@ -120,7 +123,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: prismaSvg,
     baseColor: blue,
     url: 'https://www.prisma.io/',
-    hoverTranslateY: '-translate-y-3/12',
+    hoverTranslateY: 'medium',
   },
   jwt: {
     key: 'jwt',
@@ -128,7 +131,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: jwtSvg,
     baseColor: purple,
     url: 'https://www.jwt.io/',
-    hoverTranslateY: '-translate-y-4/12',
+    hoverTranslateY: 'large',
   },
   github: {
     key: 'github',
@@ -136,7 +139,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: githubSvg,
     baseColor: grey,
     url: 'https://github.com/',
-    hoverTranslateY: '-translate-y-3/12',
+    hoverTranslateY: 'medium',
   },
   vercel: {
     key: 'vercel',
@@ -151,7 +154,7 @@ export const TECH_REGISTRY: Record<TechKey, TechInfo> = {
     icon: railwaySvg,
     baseColor: grey,
     url: 'https://railway.com/',
-    hoverTranslateY: '-translate-y-3/12',
+    hoverTranslateY: 'medium',
   },
   npm: {
     key: 'npm',
