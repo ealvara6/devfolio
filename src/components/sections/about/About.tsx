@@ -24,7 +24,7 @@ export const About = () => {
 
   return (
     <section
-      className="min-h-fit sm:max-w-10/12 pb-30 flex flex-col xl:grid xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
+      className="min-h-fit sm:max-w-10/12 pb-30 flex flex-col 2xl:grid 2xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
       id="About"
     >
       <Card className="row-span-2 max-h-full flex flex-col max-w-4xl self-center mx-auto">

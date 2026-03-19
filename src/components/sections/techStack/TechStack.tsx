@@ -56,7 +56,7 @@ export const TechStack = ({ className }: { className?: string }) => {
                     />
                     <div
                       className="absolute tracking-wider
-                     text-xs text-center opacity-0 translate-y-14 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-8"
+                     text-xs text-center opacity-0 translate-y-14 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-6 md:group-hover:translate-y-8"
                     >
                       {tech.name}
                     </div>
