@@ -12,6 +12,7 @@ import { Button } from '@/components/shared/Button';
 import type React from 'react';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { FadeInSection } from '@/components/shared/FadeInSection';
 
 export const Contact = () => {
   const [form, setForm] = useState({
@@ -54,7 +55,7 @@ export const Contact = () => {
   };
 
   return (
-    <section
+    <FadeInSection
       className=" scroll-mt-20 pt-30 pb-30 px-7 mx-auto text-center sm:max-w-4xl xl:max-w-7xl"
       id="Contact"
     >
@@ -164,6 +165,6 @@ export const Contact = () => {
         </form>
         <Toaster position="bottom-center" />
       </div>
-    </section>
+    </FadeInSection>
   );
 };

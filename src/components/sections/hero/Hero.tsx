@@ -1,9 +1,10 @@
 import Memoji from '@/assets/Memoji.png';
 import { Button } from '@/components/shared/Button';
+import { FadeInSection } from '@/components/shared/FadeInSection';
 
 export const Hero = () => {
   return (
-    <section
+    <FadeInSection
       className="min-h-[90vh] w-full bg-[url('../assets/Hexagon.svg')] lg: relative z-10 pt-8"
       id="Hero"
     >
@@ -40,6 +41,6 @@ export const Hero = () => {
           </Button>
         </div>
       </div>
-    </section>
+    </FadeInSection>
   );
 };
