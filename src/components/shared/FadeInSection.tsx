@@ -6,12 +6,14 @@ export type FadeInSectionProps = {
   children: React.ReactNode;
   className?: string;
   id?: string;
+  delay?: string;
 };
 
 export const FadeInSection = ({
   children,
   className,
   id,
+  delay,
 }: FadeInSectionProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const ref = useRef<HTMLElement | null>(null);
@@ -19,6 +21,8 @@ export const FadeInSection = ({
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+
+    const isMobile = window.matchMedia('(max-width: 768)').matches;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -28,7 +32,7 @@ export const FadeInSection = ({
         }
       },
       {
-        threshold: 0.15,
+        rootMargin: isMobile ? '0px 0px -60px 0px' : '0px 0px -120px 0px',
       },
     );
 
@@ -45,6 +49,7 @@ export const FadeInSection = ({
         'transition-all duration-700 ease-in',
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
         className,
+        delay,
       )}
     >
       {children}
