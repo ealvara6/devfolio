@@ -72,6 +72,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: oklch(14.1% 0.005 285.823);
 }
 
 @theme inline {
