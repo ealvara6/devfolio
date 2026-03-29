@@ -24,7 +24,7 @@ export const About = () => {
   };
 
   return (
-    <FadeInSection
+    <section
       className="min-h-fit sm:max-w-10/12 pb-30 flex flex-col 2xl:grid 2xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
       id="About"
     >
@@ -85,6 +85,6 @@ export const About = () => {
           <TechStack className="gap-10" />
         </Card>
       </FadeInSection>
-    </FadeInSection>
+    </section>
   );
 };
