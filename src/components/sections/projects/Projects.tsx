@@ -8,7 +8,7 @@ export const Projects = () => {
     <div className="min-h-fit pt-30 pb-30 px-7 mx-auto" id="Projects">
       <div className="flex flex-col gap-14">
         <SubHeading className="self-center">Projects</SubHeading>
-        <FadeInSection className="flex flex-col xl:flex-row gap-8 items-center xl:justify-center">
+        <div className="flex flex-col xl:flex-row gap-8 items-center xl:justify-center">
           {projectData.map((project) => {
             return (
               <FadeInSection>
@@ -16,7 +16,7 @@ export const Projects = () => {
               </FadeInSection>
             );
           })}
-        </FadeInSection>
+        </div>
       </div>
     </div>
   );
