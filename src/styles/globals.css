@@ -66,17 +66,12 @@
   --font-heading: 'Space Grotesk', ui-serif, Georgia, serif;
   --font-subheading: 'Space Grotesk', ui-serif, Georgia, serif;
 }
-@layer base {
-  html {
-    @apply bg-bg;
-  }
-  body {
-    @apply bg-bg;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  background-color: oklch(0.141 0.005 285.823);
 }
 
 @theme inline {
@@ -87,7 +82,6 @@ html {
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -122,7 +116,6 @@ html {
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -160,6 +153,6 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
 }
