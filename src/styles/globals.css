@@ -66,13 +66,14 @@
   --font-heading: 'Space Grotesk', ui-serif, Georgia, serif;
   --font-subheading: 'Space Grotesk', ui-serif, Georgia, serif;
 }
-
-/* .dark { */
-/* } */
+@layer base {
+  html {
+    @apply bg-bg;
+  }
+}
 
 html {
   scroll-behavior: smooth;
-  background-color: oklch(14.1% 0.005 285.823);
 }
 
 @theme inline {
