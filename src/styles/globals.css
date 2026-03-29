@@ -70,6 +70,9 @@
   html {
     @apply bg-bg;
   }
+  body {
+    @apply bg-bg;
+  }
 }
 
 html {
