@@ -4,11 +4,11 @@ import type { Project } from './projectData';
 export const ProjectCard = ({ data }: { data: Project }) => {
   const Tech = ({ tech }: { tech: string[] }) => {
     return (
-      <div className="flex flex-wrap w-full gap-4 text-sm grow">
+      <div className="flex flex-wrap w-full gap-4 grow">
         {tech.map((name) => {
           return (
             <div className="flex items-start">
-              <div className="font-bold border rounded-full px-6 py-1.5 border-accent text-accent-light bg-accent/20 text-xs sm:text-base">
+              <div className="font-semibold border rounded-full px-5 py-1 border-accent text-accent-light bg-accent/20 text-xs sm:text-sm">
                 {name}
               </div>
             </div>
