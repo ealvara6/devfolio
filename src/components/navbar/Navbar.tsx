@@ -48,11 +48,7 @@ export const Navbar = ({ className }: { className?: string }) => {
           </li>
         ))}
       </ul>
-      <div className="justify-self-end flex gap-6 items-center col-start-3">
-        {/* <button className="border cursor-pointer shadow-md hover:-translate-y-0.5 text-sm hover:translate-x-0.5 transition border-border  p-3 rounded-full bg-accent hover:bg-accent-hover active:translate-0">
-          <EnvelopeIcon className="w-6 h-6 text-white" aria-label="Contact" />
-        </button> */}
-      </div>
+      <div className="justify-self-end flex gap-6 items-center col-start-3"></div>
     </div>
   );
 };

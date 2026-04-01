@@ -72,6 +72,7 @@ body,
   min-height: 100%;
   margin: 0;
   background-color: oklch(0.141 0.005 285.823);
+  scroll-behavior: smooth;
 }
 
 @theme inline {

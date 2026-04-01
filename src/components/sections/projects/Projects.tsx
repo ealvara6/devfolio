@@ -5,8 +5,11 @@ import { FadeInSection } from '@/components/shared/FadeInSection';
 
 export const Projects = () => {
   return (
-    <div className="min-h-fit pt-30 pb-30 px-7 mx-auto" id="Projects">
-      <div className="flex flex-col gap-14">
+    <section
+      className="min-h-[1000px] flex items-center justify-center  px-7 mx-auto"
+      id="Project"
+    >
+      <div className="flex items-center flex-col gap-14">
         <SubHeading className="self-center">Projects</SubHeading>
         <div className="flex flex-col xl:flex-row gap-8 items-center xl:justify-center">
           {projectData.map((project) => {
@@ -18,6 +21,6 @@ export const Projects = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
