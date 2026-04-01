@@ -25,10 +25,10 @@ export const About = () => {
 
   return (
     <section
-      className="min-h-fit sm:max-w-10/12 pb-30 flex flex-col 2xl:grid 2xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
+      className="sm:max-w-9/12 pb-30 flex flex-col 2xl:grid 2xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
       id="About"
     >
-      <FadeInSection className="row-span-2 max-h-full flex flex-col max-w-4xl mx-auto">
+      <FadeInSection className="row-span-2 max-h-full flex flex-col max-w-3xl mx-auto">
         <Card>
           <div className="gap-2 items-center flex flex-col flex-1">
             <img
@@ -53,7 +53,7 @@ export const About = () => {
       <FadeInSection className="flex flex-col">
         <Card>
           <div>
-            <div className="text-3xl font-semibold tracking-wider pb-0.5">
+            <div className="text-2xl font-semibold tracking-wider pb-0.5">
               About Me
             </div>
             <div className="text-xs text-accent font-light tracking-wide flex items-center gap-0.5">
@@ -62,7 +62,7 @@ export const About = () => {
           </div>
           <div className="w-full border border-accent" />
           <div>
-            <div className="pb-5 text-base tracking-tight pt-4">
+            <div className="pb-5 text-sm tracking-tight pt-4">
               I'm Eduardo, a web developer with a degree in Management
               Information Systems from the University of Houston. I focus on
               building modern, responsive web applications using React,
@@ -80,8 +80,8 @@ export const About = () => {
           </div>
         </Card>
       </FadeInSection>
-      <FadeInSection className="min-h-full flex flex-col justify-center">
-        <Card>
+      <FadeInSection className=" flex flex-col justify-center">
+        <Card className="flex justify-center">
           <TechStack className="gap-10" />
         </Card>
       </FadeInSection>
