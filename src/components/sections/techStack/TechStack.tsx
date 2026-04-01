@@ -42,7 +42,7 @@ export const TechStack = ({ className }: { className?: string }) => {
                 return (
                   <a
                     key={tech.key}
-                    className={`w-20 h-20 md:w-24 md:h-24 flex justify-center relative items-center rounded-md z-20 hover:scale-125 transition-all duration-300 hover:cursor-pointer group overflow-hidden`}
+                    className={`w-20 h-20 flex justify-center relative items-center rounded-md z-20 hover:scale-125 transition-all duration-300 hover:cursor-pointer group overflow-hidden`}
                     href={tech.url}
                     target="_blank"
                     style={{
@@ -52,11 +52,11 @@ export const TechStack = ({ className }: { className?: string }) => {
                     <img
                       src={tech.icon}
                       alt={`${tech.name} Icon`}
-                      className={`w-10 md:w-12 ${translateMap[tech.hoverTranslateY || 'medium']} transition-all`}
+                      className={`w-10  ${translateMap[tech.hoverTranslateY || 'medium']} transition-all`}
                     />
                     <div
                       className="absolute tracking-wider
-                     text-xs text-center opacity-0 translate-y-14 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-6 md:group-hover:translate-y-8"
+                     text-[10px] text-center opacity-0 translate-y-14 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-6 md:group-hover:translate-y-6"
                     >
                       {tech.name}
                     </div>

@@ -28,7 +28,7 @@ export const About = () => {
       className="min-h-fit sm:max-w-10/12 pb-30 flex flex-col 2xl:grid 2xl:grid-cols-2 gap-10 items-center xl:items-stretch pt-14 px-7 mx-auto"
       id="About"
     >
-      <FadeInSection className="row-span-2 max-h-full flex flex-col max-w-4xl self-center mx-auto">
+      <FadeInSection className="row-span-2 max-h-full flex flex-col max-w-4xl mx-auto">
         <Card>
           <div className="gap-2 items-center flex flex-col flex-1">
             <img
@@ -50,7 +50,7 @@ export const About = () => {
           </div>
         </Card>
       </FadeInSection>
-      <FadeInSection className="flex flex-col py-12">
+      <FadeInSection className="flex flex-col">
         <Card>
           <div>
             <div className="text-3xl font-semibold tracking-wider pb-0.5">
