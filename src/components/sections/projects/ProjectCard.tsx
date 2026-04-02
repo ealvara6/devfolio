@@ -18,7 +18,7 @@ export const ProjectCard = ({ data }: { data: Project }) => {
     );
   };
   return (
-    <div className="xl:w-xl sm:w-3xl h-[470px] bg-surface rounded-md relative flex flex-col justify-between 2xl:max-w-3xl xl:max-w-xl  md:max-w-5xl">
+    <div className=" sm:w-4xl h-[470px] bg-surface rounded-md relative flex flex-col justify-between 2xl:max-w-3xl xl:max-w-4xl  md:max-w-5xl">
       <div className="relative">
         <img
           src={data.img}

@@ -11,7 +11,7 @@ export const Projects = () => {
     >
       <div className="flex items-center flex-col gap-14">
         <SubHeading className="self-center">Projects</SubHeading>
-        <div className="flex flex-col xl:flex-row gap-8 items-center xl:justify-center">
+        <div className="flex flex-col 2xl:flex-wrap 2xl:flex-row gap-8 items-center 2xl:justify-center">
           {projectData.map((project) => {
             return (
               <FadeInSection>
