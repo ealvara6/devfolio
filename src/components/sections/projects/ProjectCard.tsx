@@ -18,7 +18,8 @@ export const ProjectCard = ({ data }: { data: Project }) => {
     );
   };
   return (
-    <div className=" sm:w-4xl h-[470px] bg-surface rounded-md relative flex flex-col justify-between 2xl:max-w-3xl xl:max-w-4xl  md:max-w-5xl">
+    // <div className=" sm:w-4xl h-[470px] bg-surface rounded-md relative flex flex-col justify-between 2xl:max-w-3xl xl:max-w-4xl  md:max-w-5xl">
+    <div className="bg-surface rounded-md relative flex flex-col justify-between gap-2 h-[460px]">
       <div className="relative">
         <img
           src={data.img}
@@ -34,11 +35,9 @@ export const ProjectCard = ({ data }: { data: Project }) => {
         </div>
       </div>
       <div className="flex flex-col px-4 pt-2 gap-2.5 flex-1">
-        <div className="text-md text-gray-300 max-w-2xl flex-1">
-          {data.desc}
-        </div>
+        <div className="text-md text-gray-300 flex-1">{data.desc}</div>
         <Tech tech={data.tech} />
-        <div className="flex gap-4 justify-center pb-6">
+        <div className="flex gap-4 justify-center pb-6 pt-6">
           <Button className="w-36" href={data.url} target="_blank">
             Live Preview
           </Button>

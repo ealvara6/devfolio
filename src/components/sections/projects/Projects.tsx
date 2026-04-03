@@ -9,12 +9,12 @@ export const Projects = () => {
       className="min-h-[1000px] flex items-center justify-center  px-7 mx-auto"
       id="Project"
     >
-      <div className="flex items-center flex-col gap-14">
+      <div className="flex items-center flex-col gap-14 w-full">
         <SubHeading className="self-center">Projects</SubHeading>
-        <div className="flex flex-col 2xl:flex-wrap 2xl:flex-row gap-8 items-center 2xl:justify-center">
+        <div className="flex flex-col gap-12 w-full lg:flex-row lg:flex-wrap justify-center">
           {projectData.map((project) => {
             return (
-              <FadeInSection>
+              <FadeInSection className="lg:max-w-xl w-full">
                 <ProjectCard data={project} />
               </FadeInSection>
             );
