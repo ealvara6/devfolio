@@ -24,7 +24,7 @@ export const TechStack = ({ className }: { className?: string }) => {
             }`}
             key={section.key}
           >
-            <h2 className="text-md tracking-wider pb-3 self-center font-semibold text-accent-light/90">
+            <h2 className="text-md sm:text-lg tracking-wider pb-3 self-center font-semibold text-accent-light/90">
               {section.name}
             </h2>
             <div className="relative rounded-md p-4 flex flex-wrap justify-center items-center max-w-full w-full h-full gap-y-4 gap-x-5">

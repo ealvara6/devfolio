@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { TechStack } from '../techStack/TechStack';
 import { Button } from '@/components/shared/Button';
 import { FadeInSection } from '@/components/shared/FadeInSection';
+import { SubHeading } from '@/components/shared/SubHeading';
 
 export const About = () => {
   const Card = ({
@@ -37,10 +38,10 @@ export const About = () => {
               className="rounded-xl h-full w-full object-cover"
             />
             <div className="text-center">
-              <div className="text-xl tracking-wide font-semibold">
+              <div className="text-lg sm:text-xl md:text-2xl tracking-wide font-semibold">
                 Eduardo Alvarado
               </div>
-              <div className="text-base text-text-muted font-medium">
+              <div className="text-sm sm:text-base md:text-lg text-text-muted font-medium">
                 Jr. Full Stack Web Developer
               </div>
             </div>
@@ -53,16 +54,16 @@ export const About = () => {
       <FadeInSection className="flex flex-col">
         <Card>
           <div>
-            <div className="text-2xl font-semibold tracking-wider pb-0.5">
+            <SubHeading className="text-xl sm:text2xl  font-semibold tracking-wider pb-0.5">
               About Me
-            </div>
-            <div className="text-xs text-accent font-light tracking-wide flex items-center gap-0.5">
-              <CheckBadgeIcon className="w-4 pb-1" /> Available for Hire
+            </SubHeading>
+            <div className="text-xs sm:text-sm  italic pb-1 text-accent font-light tracking-wide flex items-center gap-0.5">
+              <CheckBadgeIcon className="w-4 sm:w-5" /> Available for Hire
             </div>
           </div>
           <div className="w-full border border-accent" />
-          <div>
-            <div className="pb-5 text-sm tracking-tight pt-4">
+          <div className="tracking-tight text-sm sm:text-base md:text-lg">
+            <div className="pb-5 pt-4">
               I'm Eduardo, a web developer with a degree in Management
               Information Systems from the University of Houston. I focus on
               building modern, responsive web applications using React,
@@ -71,7 +72,7 @@ export const About = () => {
               development role where I can contribute to real world products and
               allows for professional and technical growth.
             </div>
-            <div className=" text-base tracking-tight">
+            <div className="">
               When I'm not coding, you'll usually find me at the gym or
               experimenting with new recipes. I love cooking, staying active,
               and finding small ways to keep improving — whether it's in the

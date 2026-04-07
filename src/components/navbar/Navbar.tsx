@@ -34,7 +34,7 @@ export const Navbar = ({ className }: { className?: string }) => {
           <li
             key={link.name}
             className={clsx(
-              'text-lg tracking-widest font-subHeading  rounded-xl p-2',
+              'text-sm sm:text-base tracking-widest font-subHeading  rounded-xl p-2',
             )}
           >
             <a

@@ -152,7 +152,7 @@ export const Contact = () => {
               )}
             </Button>
 
-            <div className="text-text-muted text-sm">
+            <div className="text-text-muted text-xs sm:text-sm">
               Prefer email? You can reach me at{' '}
               <a
                 href="mailto:ealvara73@gmail.com"

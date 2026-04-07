@@ -1,4 +1,3 @@
-import { SubHeading } from '@/components/shared/SubHeading';
 import { ProjectCard } from './ProjectCard';
 import { projectData } from './projectData';
 import { FadeInSection } from '@/components/shared/FadeInSection';
@@ -10,7 +9,9 @@ export const Projects = () => {
       id="Project"
     >
       <div className="flex items-center flex-col gap-14 w-full">
-        <SubHeading className="self-center">Projects</SubHeading>
+        <h1 className="self-center text-2xl font-semibold tracking-wider sm:text-3xl md:text-4xl">
+          Projects
+        </h1>
         <div className="flex flex-col gap-12 w-full lg:flex-row lg:flex-wrap justify-center">
           {projectData.map((project) => {
             return (

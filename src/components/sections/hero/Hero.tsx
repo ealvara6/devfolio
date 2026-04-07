@@ -9,7 +9,7 @@ export const Hero = () => {
       id="Hero"
     >
       <div className="absolute inset-0 bg-black/10 -z-10 bg-gradient-to-b from-transparent to-bg pointer-events-none"></div>
-      <FadeInSection className=" flex justify-center w-full">
+      <FadeInSection className="flex justify-center w-full">
         <div className="mx-7 w-full  md:max-w-7xl flex flex-col gap-2 justify-center items-center text-text">
           <div className="border w-48 h-48 md:w-64 md:h-64 bg-surface border-border rounded-full flex justify-center items-center">
             <img
@@ -19,13 +19,13 @@ export const Hero = () => {
             />
           </div>
           <div className="flex flex-col text-center">
-            <div className="font-heading text-2xl md:text-3xl font-medium tracking-wider relative">
+            <div className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-medium tracking-wide relative">
               Hi, I'm Eduardo
-              <span className="absolute text-xl md:text-2xl translate-y-0.5">
+              <span className="absolute text-lg sm:text-xl md:text-3xl lg:text-4xl translate-y-0.5 lg:translate-y-1.5 sm:translate-y-1">
                 &#x1F44B;
               </span>
             </div>
-            <div className="font-subheading text-lg font-light text-text-muted tracking-normal pb-4">
+            <div className="font-subheading text-md sm:text-lg md:text-xl font-light text-text-muted tracking-normal pb-4">
               Full-Stack Developer & Tech Enthusiast
             </div>
           </div>

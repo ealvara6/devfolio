@@ -12,7 +12,7 @@ type ButtonProps = {
   disabled?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const baseClasses = `border rounded-md text-center border-accent hover:-translate-y-0.5 hover:translate-x-0.5 transition-all shadow-md cursor-pointer py-3 active:translate-0 tracking-wider`;
+const baseClasses = `border rounded-md text-sm sm:text-base md:text-lg text-center border-accent hover:-translate-y-0.5 hover:translate-x-0.5 transition-all shadow-md cursor-pointer py-3 active:translate-0 tracking-wider`;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: 'bg-gradient-to-r from-emerald-500 to-emerald-400',
