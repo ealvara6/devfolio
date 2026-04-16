@@ -68,14 +68,16 @@ export const About = () => {
               Information Systems from the University of Houston. I focus on
               building modern, responsive web applications using React,
               Typescript, Node.js, and PostgeSQL that follow today's best
-              practices. I am searching for a junior front-end or full stack
-              development role where I can contribute to real world products and
-              allows for professional and technical growth.
+              practices. I enjoy searching for efficient ways to write cleaner
+              code and ways to improve UI and efficient backend systems. I am
+              searching for a junior front-end or full stack development role
+              where I can contribute to real world products and allows for
+              professional and technical growth.
             </div>
             <div className="">
               When I'm not coding, you'll usually find me at the gym or
               experimenting with new recipes. I love cooking, staying active,
-              and finding small ways to keep improving — whether it's in the
+              and finding small ways to keep improving, whether it's in the
               kitchen or in my projects.
             </div>
           </div>

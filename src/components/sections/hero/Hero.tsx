@@ -26,7 +26,7 @@ export const Hero = () => {
               </span>
             </div>
             <div className="font-subheading text-md sm:text-lg md:text-xl font-light text-text-muted tracking-normal pb-4">
-              Full-Stack Developer & Tech Enthusiast
+              Full-Stack Developer focused on building modern web apps
             </div>
           </div>
           <div className="w-full text-base md:text-lg flex flex-col gap-6 tracking-wide items-center">
