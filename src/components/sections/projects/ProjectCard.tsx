@@ -49,7 +49,7 @@ export const ProjectCard = ({ data }: { data: Project }) => {
             {data.tagline}
           </div>
         </div>
-        <div className="flex-1 flex flex-col gap-3">
+        <div className="flex-1 flex flex-col gap-3 pb-3">
           <div className="text-base max-w-lg leading-7 text-zinc-200 pb-6">
             {data.desc}
           </div>
@@ -59,8 +59,8 @@ export const ProjectCard = ({ data }: { data: Project }) => {
             </div>
             <Features />
           </div>
-          <Tech tech={data.tech} />
         </div>
+        <Tech tech={data.tech} />
         <div className="flex gap-10 justify-center pb-6 pt-6">
           <Button className="w-2xs" href={data.url} target="_blank">
             Live Preview
