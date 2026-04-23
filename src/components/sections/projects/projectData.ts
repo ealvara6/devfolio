@@ -1,4 +1,3 @@
-import postiflyImg from '@/assets/postifly.webp';
 import pokeMemImg from '@/assets/pokemem.webp';
 import battleShipImg from '@/assets/battleship.webp';
 
@@ -9,15 +8,22 @@ type MetaProps = {
   db?: string;
 };
 
+type ImageProps = {
+  small: string;
+  medium: string;
+  large: string;
+};
+
 export type Project = {
   name: string;
   tagline: string;
   url: string;
   github: string;
   desc: string;
+  keyFeatures: string[];
   tech: string[];
   meta: MetaProps;
-  img: string;
+  img: ImageProps;
 };
 
 export const projectData: Project[] = [
@@ -32,9 +38,21 @@ export const projectData: Project[] = [
       highlight: 'Auth + REST API',
       db: 'PostgreSQL',
     },
-    desc: 'A full-stack blogging platform with authentication, REST APIs, and a PostgreSQL database.',
+    desc: 'Developed a full-stack blogging platform using React, Node.js, Express, PostgreSQL, and Prisma ORM. Built RESTful APIs and a modular backend to support dynamic content, user authentication, and scalable data management, alongside a responsive frontend with real-time state updates.',
+    keyFeatures: [
+      'JWT-based authentication with password hashing and protected routes',
+      'Full CRUD functionality for posts and comments',
+      'Relational database design with Prisma ORM',
+      'Like system with structured data relationships',
+      'Backend middleware for authentication and request handling',
+      'Form validation and dynamic UI updates',
+    ],
     tech: ['React', 'Node', 'Postgres'],
-    img: postiflyImg,
+    img: {
+      small: '/images/postifly-400.webp',
+      medium: '/images/postifly-800.webp',
+      large: '/images/postifly-1600.webp',
+    },
   },
   {
     name: 'PokeMem',
@@ -46,9 +64,21 @@ export const projectData: Project[] = [
       year: '2023',
       highlight: 'UI + API consumption',
     },
-    desc: 'A Pokémon memory game with API-powered levels and persistent score tracking.',
+    desc: 'Built a Pokémon memory game using the PokéAPI, featuring dynamic data fetching, randomized gameplay, and interactive UI state management in React.',
+    keyFeatures: [
+      'Dynamic data fetching from PokéAPI',
+      'Persistent score tracking with localStorage',
+      'Game logic to track selections and prevent duplicates',
+      'Difficulty increase after each round',
+      'Randomized card shuffling for replayability',
+      'Complex state management for game flow and UI updates',
+    ],
     tech: ['React', 'API', 'SASS'],
-    img: pokeMemImg,
+    img: {
+      small: '/images/pokemem-400.webp',
+      medium: '/images/pokemem-800.webp',
+      large: '/images/pokemem-1600.webp',
+    },
   },
   {
     name: 'Battleship',
@@ -60,8 +90,19 @@ export const projectData: Project[] = [
       year: '2021',
       highlight: 'javascript logic + jest testing',
     },
-    desc: 'A turn-based Battleship game built with object-oriented JavaScript, AI logic, and full Jest test coverage.',
+    desc: 'Built a turn-based Battleship game using object-oriented JavaScript, featuring modular game logic, AI-driven opponent behavior, and fully tested core functionality.',
+    keyFeatures: [
+      'Object-oriented design for board, ship, and game state management',
+      'Turn-based game flow with win condition handling',
+      'AI opponent logic to simulate player decisions',
+      'Input validation to ensure valid gameplay interactions',
+      'Full test coverage using Jest',
+    ],
     tech: ['JavaScript', 'Jest', 'SASS'],
-    img: battleShipImg,
+    img: {
+      small: '/images/battleship-400.webp',
+      medium: '/images/battleship-800.webp',
+      large: '/images/battleship-1600.webp',
+    },
   },
 ];

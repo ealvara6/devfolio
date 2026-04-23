@@ -12,10 +12,10 @@ export const Projects = () => {
         <h1 className="self-center text-2xl font-semibold tracking-wider sm:text-3xl md:text-4xl">
           Projects
         </h1>
-        <div className="flex flex-col gap-12 w-full lg:flex-row lg:flex-wrap justify-center">
+        <div className="flex flex-col gap-12 w-full items-center justify-center">
           {projectData.map((project) => {
             return (
-              <FadeInSection className="lg:max-w-xl w-full">
+              <FadeInSection className="lg:max-w-9/12 w-full">
                 <ProjectCard data={project} />
               </FadeInSection>
             );

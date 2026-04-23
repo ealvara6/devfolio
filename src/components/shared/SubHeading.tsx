@@ -10,7 +10,7 @@ export const SubHeading = ({ children, className }: SubHeadingProps) => {
   return (
     <h2
       className={clsx(
-        `text-xl sm:text2xl  font-semibold tracking-wider`,
+        `text-xl sm:text-2xl  font-semibold tracking-widest`,
         className,
       )}
     >
