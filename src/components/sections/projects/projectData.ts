@@ -1,6 +1,3 @@
-import pokeMemImg from '@/assets/pokemem.webp';
-import battleShipImg from '@/assets/battleship.webp';
-
 type MetaProps = {
   role: string;
   year: string;
