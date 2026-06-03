@@ -4,10 +4,17 @@ A modern Full Stack Web Developer Portfolio Website built with React, Typescript
 Live Demo: [ealvara73.com](https://www.ealvara73.com/)
 
 # Local Install
+1. Clone the repo
 ```
 git clone https://github.com/username/devfolio.git
 cd devfolio
+```
+2. Install Dependencies
+```
 npm install
+```
+3. Run the server
+```
 npm run dev
 ```
 
