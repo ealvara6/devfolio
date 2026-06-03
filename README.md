@@ -4,7 +4,14 @@ A modern Full Stack Web Developer Portfolio Website built with React, Typescript
 Live Demo: [ealvara73.com](https://www.ealvara73.com/)
 
 # Preview
+### Hero
+![hero image](./screenshots/hero.png)
 
+### About
+![about image](./screenshots/about.png)
+
+### Projects
+![projects image](./screenshots/projects.png)
 
 # Features
 - Responsive design for desktop and mobile
