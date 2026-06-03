@@ -3,6 +3,15 @@ A modern Full Stack Web Developer Portfolio Website built with React, Typescript
 
 Live Demo: [ealvara73.com](https://www.ealvara73.com/)
 
+# Local Install
+```
+git clone https://github.com/username/devfolio.git
+cd devfolio
+npm install
+npm run dev
+```
+
+
 # Preview
 ### Hero
 ![hero image](./screenshots/hero.png)
@@ -12,6 +21,11 @@ Live Demo: [ealvara73.com](https://www.ealvara73.com/)
 
 ### Projects
 ![projects image](./screenshots/projects.png)
+
+# Featured Projects
+- [Postifly](https://github.com/ealvara6/blog-post)
+- [PokeMem](https://github.com/ealvara6/Poke-Mem)
+- [BattleShip](https://github.com/ealvara6/battleship)
 
 # Features
 - Responsive design for desktop and mobile
@@ -38,16 +52,3 @@ This project was developed with a focus on:
 - Accessibility
 - Responive Layouts
 - Modern UI/UX principles
-
-# Featured Projects
-- [Postifly](https://github.com/ealvara6/blog-post)
-- [PokeMem](https://github.com/ealvara6/Poke-Mem)
-- [BattleShip](https://github.com/ealvara6/battleship)
-
-# Local Install
-```
-git clone https://github.com/username/devfolio.git
-cd devfolio
-npm install
-npm run dev
-```
