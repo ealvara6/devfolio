@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# Devfolio
+A modern Full Stack Web Developer Portfolio Website built with React, Typescript, and Tailwind CSS to showcase my skills, projects, and experience as a web developer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo: [ealvara73.com](https://www.ealvara73.com/)
 
-Currently, two official plugins are available:
+# Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+# Features
+- Responsive design for desktop and mobile
+- Smooth scrolling navigation
+- Animated section reveals
+- Project showcases
+- Skills and technology overview
+- Contact form with Social links
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Frontend
+- React
+- Typescript
+- Tailwind CSS
+- Vite
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## libraries
+- shadcn/ui
+- Lucide React
+- Heroicons
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Design Goals
+This project was developed with a focus on:
+- Clean visual heiarchy
+- Accessibility
+- Responive Layouts
+- Modern UI/UX principles
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Featured Projects
+- [Postifly](https://github.com/ealvara6/blog-post)
+- [PokeMem](https://github.com/ealvara6/Poke-Mem)
+- [BattleShip](https://github.com/ealvara6/battleship)
+
+# Local Install
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+git clone https://github.com/username/devfolio.git
+cd devfolio
+npm install
+npm run dev
 ```
