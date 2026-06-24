@@ -11,7 +11,10 @@ export default async function handler(req: any, res: any) {
       to: process.env.CONTACT_TO_EMAIL as string,
       subject: `Portfolio message from ${name}`,
       replyTo: email,
-      text: `From: ${name} <${email}\n\n${message}>`,
+      text: `Name: ${name}: \n
+      Email: ${email} \n
+      Message: \n
+      ${message}`.trim(),
     });
 
     return res.status(200).json({ ok: true });
