@@ -44,6 +44,7 @@ export const Contact = () => {
         throw new Error(`Request failed: ${res.status}`);
       } else {
         setIsSubmitting(false);
+        setForm({ name: '', email: '', message: '' });
         toast.success('Successfully Sent!');
       }
     } catch (err) {
@@ -115,6 +116,7 @@ export const Contact = () => {
               type="text"
               className="px-3 py-3.5 rounded-lg bg-border"
               placeholder="Full Name"
+              value={form.name}
               onChange={(e) =>
                 setForm((prev) => ({ ...prev, name: e.target.value }))
               }
@@ -124,6 +126,7 @@ export const Contact = () => {
               type="text"
               className="px-3 py-3.5 rounded-lg bg-border"
               placeholder="Email"
+              value={form.email}
               onChange={(e) =>
                 setForm((prev) => ({ ...prev, email: e.target.value }))
               }
@@ -132,6 +135,7 @@ export const Contact = () => {
               name="message"
               className="px-3 py-3.5 rounded-lg bg-border resize-none h-48"
               placeholder="Message"
+              value={form.message}
               onChange={(e) =>
                 setForm((prev) => ({ ...prev, message: e.target.value }))
               }
